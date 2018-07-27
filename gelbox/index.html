@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DouglasLab | Gelbox</title>
+  <link rel="stylesheet" href="../css/bulma.css">
+  <link rel="stylesheet" href="../css/all.css" >
+  <!-- <link rel="stylesheet" href="../css/refs.css"> -->
+  <!-- <script src="/js/bodymovin.min.js"></script> -->
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-10 is-offset-1">
+        <figure class="image">
+            <video autoplay="true" loop="true">
+            <source src="./images/gelboxloop.webm" type="video/webm">
+            <source src="./images/gelboxloop.mp4" type="video/mp4">
+              video tag unsupported</video>
+        </figure>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-8">
+        <h1 class="title is-spaced">
+          Gelbox
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8">
+<!--         <h1 class="title is-spaced">
+          Gelbox
+        </h1> -->
+        <div class="columns">
+          <div class="column is-3">
+            <p class="is-marginless">
+              <strong>Authors</strong>
+            </p>
+          </div>
+          <div class="column is-4">
+            <p class="subtitle is-marginless">
+              Chaim Gingold
+            </p>
+            <p class="subtitle is-6">
+              <a href="http://chaim.io">chaim.io</a>
+            </p>
+          </div>
+          <div class="column">
+            <p class="subtitle is-marginless">
+              Shawn M. Douglas
+            </p>
+            <p class="subtitle is-6">
+              <a href="http://douglaslab.org">douglaslab.org</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2">
+        <strong>Abstract</strong>
+      </div>
+      <div class="column">
+        Gel electrophoresis enables separation and visualization of biomolecules such as DNA, RNA, or proteins. Like many powerful tools, effective use of gels can be difficult to learn. <span class="has-text-weight-semibold">Gelbox</span> is a simulation tool to help build intuition for the relationships between experimental input parameters and resulting data output from gel electrophoresis. Our simulation model handles a wide range of settings, including many "suboptimal" values that may be useful for troubleshooting common mistakes by novices.
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2">
+        <strong>Downloads</strong>
+      </div>
+      <div class="column">
+        <!-- <a class="button is-warning">macOS</a> <a class="button is-warning">Win</a> <a class="button is-warning">GitHub</a> -->
+        <a class="button is-primary"><i class="fas fa-fw fa-arrow-to-bottom"></i> macOS</a>
+        <a class="button"><i class="fab fa-fw fa-github"></i>&nbsp;Source</a>
+      </div>
+      <div class="column is-7">
+        <a class="button" href="./presskit/"><i class="far fa-fw fa-bullhorn"></i>&nbsp;Press kit</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h1 id="quickstart" class="title is-3">Quick Start <a href="#quickstart">•</a></h1>
+    <p>Video coming soon.</p>
+</div>
+</section>
+<section class="section">
+  <div class="container">
+    <h1 id="introduction" class="title is-3">Introduction <a href="#introduction">•</a></h1>
+    <div class="columns">
+      <div class="column">
+        <p>In 1948, Arne Tiselius was awarded Nobel Prize in Chemistry for "Electrophoresis and Adsorption Analysis as Aids in Investigations of Large Molecular Weight Substances and Their Breakdown Products." Tiselius summarized his motivations for the work:<sup><a id="Tiselius1948" href="#references">1</a></sup>
+        </p>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-7 is-offset-1">
+        <article class="message is-warning">
+          <div class="message-body">
+            [In  biochemistry] some of the most important problems are to <em class="has-text-weight-semibold">isolate</em> the substances which are responsible for a specific biological or biochemical effect, and also to <em class="has-text-weight-semibold">define</em> and <em class="has-text-weight-semibold">characterize</em> these substances as accurately as possible.<br>—<em>Arne Tiselius, 1948 Nobel Lecture</em> <small>(Photo: <a target="_new" href="https://digitaltmuseum.se/011014036836/professor-arne-tiselius-i-arbete-uppsala-1955">digitaltmuseum.se</a>)</small>
+          </div>
+        </article>
+      </div>
+      <div class="column is-2">
+        <img src="./images/ArneTiselius.jpg" alt="Arne Tiselius">
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <p>
+        Today, gel electrophoresis is used on a daily basis in biology labs worldwide to isolate, define, and characterize biomolecules. Electrophoresis is a powerful and versatile technique that is remarkably precise, yet very gentle on the molecules being analyzed. However, one major drawback is that the method can be difficult to learn. Gels must be prepared by carrying out a detailed protocol with many time-sensitive steps. Interpreting the resulting gel data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract, often ambiguous, and easily confounded by subtle errors in gel preparation.
+        </p>
+      </div>
+    </div>
+    <div class="container box">
+    <div class="columns">
+      <div class="column">
+        <img src="./images/calibration-gels-crop.png" alt="Three gels">
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-black">Identical samples (1kb ladders) run on different gels cast with different buffers can yield dramatically different results. Left: TAE with 10-fold excess Tris (400mM Tris, 20mM acetic acid, 1mM EDTA), Center: TAE with 10-fold excess acetic acid (40mM Tris, 200mM acetic acid, 1mM EDTA), Right: gel cast with water only.</p>
+      </div>
+    </div>
+  </div>
+    <div class="columns">
+      <div class="column">
+        <p>
+        Moreover, the feedback loop when learning gel electrophoresis is slow—mistakes only become evident upon data collection hours after they occurred, and in practice it's difficult to run more than a couple gels each day. These challenges can frustrate budding scientists, may interfere with scientific reproducibility, and impede overall research progress.
+        </p>
+        <p>
+        Of course, gel electrophoresis not the only example of a complex system with hidden behaviors in scientific research, nor are we are not the first to recognize the problem. We have been inspired by many other works, most notably Author1's work on Subject1,<sup><a id="inspire1" href="#references">2</a></sup>, Author2's work on Subject2<sup><a id="inspire2" href="#references">3</a></sup>, and Author3's work on Subject3.<sup><a id="inspire3" href="#references">4</a></sup>
+        </p>
+        <p>
+        We believe interactive simulation and visualization tools can help overcome these challenges by providing alternative routes to understanding complex processes like gel electrophoresis. <span class="has-text-weight-semibold">Gelbox</span> is a dynamic “scientific sandbox” for visualizing the link between gel band patterns and sample molecules. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways. We hope <span class="has-text-weight-semibold">Gelbox</span> will offer a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
+        </p>
+      </div>
+    </div>
+    <br>
+    <!-- End of Introduction -->
+    <h1 id="interface" class="title is-4">The Interface <a href="#interface">•</a></h1>
+    <br>
+    <div class="columns">
+      <div class="column is-12">
+        <img src="./images/gelbox-views.png" alt="Gel view">
+      </div>
+    </div>
+    <br>
+    <!-- End of Interface -->
+    <div class="container box message">
+    <h1 id="commands" class="title is-3">Commands &amp; Shortcuts <a href="#commands">•</a></h1>
+    <h3 class="title is-4">Bands</h3>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/duplicate1.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Duplicate</p>
+            <p class="subtitle is-6">Hold Option, click & drag, then release</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/move-band.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Move band</p>
+            <p class="subtitle is-6">Click & drag. Hold Shift to snap to same size.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/select-band.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Select next</p>
+            <p class="subtitle is-6">Tab key; Shift+tab to reverse.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/delete-band.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Delete</p>
+            <p class="subtitle is-6">Select and press delete or backspace</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Samples</h3>
+    <div class="columns">
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/duplicate-sample.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Duplicate</p>
+            <p class="subtitle is-6">Hold Option, click & drag sample</p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/move-sample.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Move sample</p>
+            <p class="subtitle is-6">Click tube, drag to an empty well</p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/delete-sample.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Delete sample</p>
+            <p class="subtitle is-6">Click tube, drag and release away from gel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="message">Loupes</h2>
+    <div class="columns">
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/loupe.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Show loupe</p>
+            <p class="subtitle is-6">Hold ⌘ key when cursor is over gel</p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-image">
+              <figure class="image">
+                <video autoplay="true" loop="true">
+                <source src="./images/fixedloupe1.webm" type="video/webm">video tag unsupported</video>
+              </figure>
+          </div>
+          <div class="card-content">
+            <p class="title is-4">Add fixed loupe</p>
+            <p class="subtitle is-6">Hold ⌘ key and click on gel. Reposition or delete.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Files</h3>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Save gel</p>
+            <p class="subtitle is-6">⌘-S will save a json file with the extension ".gelbox"</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Load gel</p>
+            <p class="subtitle is-6">⌘-O, or drag file into window. Or use app menu.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Save Sample</p>
+            <p class="subtitle is-6">⌘-Option-S will save a json file with the extension ".gelsample"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-7">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Load Sample</p>
+            <p class="subtitle is-6">Drag a ".gelsample" file into window, or drop it into a specific lane.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Load image</p>
+            <p class="subtitle is-6">Drag image (png, jpg, gif) file into window.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+    <!-- End of Commands -->
+    <h1 id="sim" class="title is-4">Under the hood <a href="#sim">•</a></h1>
+    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we relied on expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" class="has-text-weight-semibold" href="#references">5</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" class="has-text-weight-semibold" href="#references">6</a></sup>.
+    </p>
+    <br><br>
+    <!-- End of Commands -->
+    <div class="level">
+      <div class="level-left"><h1 id="references" class="title is-4">References <a href="#references">•</a></h1></div>
+      <div class="level-right">
+        <div class="level-item">
+          <small>Click <a href="#"><i class="fal fa-level-up"></i></a> to jump to original context.</small>
+        </div>
+      </div>
+    </div>
+    <ol>
+      <li>A. Tiselius, Electrophoresis and Adsorption Analysis as Aids in Investigations of Large Molecular Weight Substances and Their Breakdown Products, 1948 Nobel Lecture <a href="#Tiselius1948"><i class="fal fa-level-up"></i></a></li>
+      <li>Inspiration 1 <a href="#inspire1"><i class="fal fa-level-up"></i></a></li></li>
+      <li>Inspiration 2 <a href="#inspire2"><i class="fal fa-level-up"></i></a></li></li>
+      <li>Inspiration 3 <a href="#inspire3"><i class="fal fa-level-up"></i></a></li></li>
+      <li>D.H. Van Winkle, A. Beheshti, R.L. Rill, DNA electrophoresis in agarose gels: A simple relation describing the length dependence of mobility, 2002 <em>Electrophoresis</em> 23, 15–19 <a href="#VanWinkle2002"><i class="fal fa-level-up"></i></a></li>
+      <li>A. Beheshti, DNA electrophoresis in agarose gels: A new mobility vs. DNA length dependence, 2002 <em>Dissertation, The Florida State University</em> <a href="#Beheshti2002"><i class="fal fa-level-up"></i></a></li>
+    </ol>
+</section>

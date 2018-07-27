@@ -1,0 +1,30 @@
+{
+  "name": "douglaslab.org",
+  "version": "1.0.0",
+  "description": "DouglasLab",
+  "main": "test.sass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglaslab/douglaslab.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "bodymovin": "^4.10.2",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0",
+    "rimraf": "^2.6.1"
+  },
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma.css css/bulma.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true douglaslab.sass css/bulma.css",
+    "deploy": "npm run build",
+    "start": "npm run build-sass -- --watch"
+  },
+  "author": "Shawn M. Douglas <shawn.douglas@ucsf.edu>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "bulma": "0.7.1"
+  }
+}
