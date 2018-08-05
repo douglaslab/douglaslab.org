@@ -118,7 +118,7 @@
         </p>
         <br>
         <p>
-        First, gels must be prepared according to detailed protocols. Subtle variations in timing of a step or the amount of an ingredient can dramatically affect gel behavior. For example, we ran the same 1kb ladder samples on three gels that were prepared with different buffers. The degree of band mobility, smearing, and distortion is very different for each gel.
+        First, gels must be prepared according to detailed protocols. Subtle variations in the timing of a step or the amount of an ingredient can dramatically affect gel behavior. For example, we ran identical 1kb ladder samples on three gels that were prepared with different buffers. We observed that the degree of band mobility, smearing, and distortion was very different for each gel.
         </p>
       </div>
     </div>
@@ -147,15 +147,23 @@
     <div class="columns">
       <div class="column">
         <p>
-        The feedback loop is slow, and mistakes only become evident hours after they occurred. Even when gels are prepared and run successfully, interpreting gel data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
+        The feedback loop is slow in learning gels, and mistakes only become evident hours after they occurred. Even when gels are prepared and run successfully, interpreting the data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
         </p>
         <br>
         <p>
         We believe interactive simulation and visualization tools can help. Here we present <span class="has-text-weight-semibold">Gelbox</span>, a dynamic “scientific sandbox” for visualizing the relationships between gel bands, sample molecules, and the setup of the gel. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways. We hope this tool offers a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
         </p>
         <br>
+        <p class="box">
+History of gel "simulation" and classic limitations
+- single static view vs multiple linked representations
+- offers size only (most trivial aspect)
+- too perfect, no mistakes
+        </p>
+        <br>
         <p>
         This project builds on concepts from <span class="has-text-weight-semibold">Earth Primer</span>, an interactive geology science book by Gingold<sup><a id="earthprimer" href="#references">2</a></sup>. We have also been greatly inspired by Bret Victor's <span class="is-italic">Up and Down the Ladder of Abstraction</span><sup><a id="inspire1" href="#references">3</a></sup>, <span class="is-italic">Parable of the Polygons</span> by Vi Hart and Nicky Case<sup><a id="inspire2" href="#references">4</a></sup>, and many other works<sup><a id="inspire3" href="#references">5–7</a></sup>.
+
         </p>
         <br>
         <p>
@@ -371,10 +379,19 @@
   </div>
     <!-- End of Commands -->
     <h1 id="sim" class="title is-4">Under the hood <a href="#sim">•</a></h1>
-    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we relied on expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" class="has-text-weight-semibold" href="#references">8</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" class="has-text-weight-semibold" href="#references">9</a></sup>.
+    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" class="has-text-weight-semibold" href="#references">8</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" class="has-text-weight-semibold" href="#references">9</a></sup>.
     </p>
     <br><br>
-    <!-- End of Commands -->
+    <!-- End of Under the hood -->
+    <h1 id="sim" class="title is-4">Limitations and Caveats <a href="#sim">•</a></h1>
+    <p>
+      limited first pass on simulation
+    </p>
+    <p>
+      initial focus was on the representation
+    </p>
+    <br><br>
+    <!-- End of Limitations and Caveats -->
     <div class="level">
       <div class="level-left"><h1 id="references" class="title is-4">References <a href="#references">•</a></h1></div>
       <div class="level-right">
