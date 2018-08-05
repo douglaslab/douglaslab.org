@@ -8,11 +8,11 @@
     "url": "git+https://github.com/douglaslab/douglaslab.git"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
-    "bodymovin": "^4.10.2",
-    "node-sass": "^4.5.3",
-    "postcss-cli": "^4.1.0",
-    "rimraf": "^2.6.1"
+    "autoprefixer": "^9.1.0",
+    "bodymovin": "^4.13.0",
+    "node-sass": "^4.9.2",
+    "postcss-cli": "^6.0.0",
+    "rimraf": "^2.6.2"
   },
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
