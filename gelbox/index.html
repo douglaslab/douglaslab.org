@@ -95,63 +95,97 @@
     <h1 id="introduction" class="title is-3">Introduction <a href="#introduction">•</a></h1>
     <div class="columns">
       <div class="column">
-        <p>In 1948, Arne Tiselius was awarded Nobel Prize in Chemistry for "Electrophoresis and Adsorption Analysis as Aids in Investigations of Large Molecular Weight Substances and Their Breakdown Products." Tiselius summarized his motivations for the work:<sup><a id="Tiselius1948" href="#references">1</a></sup>
+        <p>In 1948, when Arne Tiselius was awarded Nobel Prize in Chemistry for his pioneering work on electrophoresis, he summarized his motivations for the work as follows:
         </p>
       </div>
     </div>
     <div class="columns">
-      <div class="column is-7 is-offset-1">
-        <article class="message is-warning">
+      <div class="column is-6 is-offset-1">
+        <article class="message is-notification">
           <div class="message-body">
-            [In  biochemistry] some of the most important problems are to <em class="has-text-weight-semibold">isolate</em> the substances which are responsible for a specific biological or biochemical effect, and also to <em class="has-text-weight-semibold">define</em> and <em class="has-text-weight-semibold">characterize</em> these substances as accurately as possible.<br>—<em>Arne Tiselius, 1948 Nobel Lecture</em> <small>(Photo: <a target="_new" href="https://digitaltmuseum.se/011014036836/professor-arne-tiselius-i-arbete-uppsala-1955">digitaltmuseum.se</a>)</small>
+            [In  biochemistry] some of the most important problems are to <span class="has-text-weight-bold is-italic">isolate</span> the substances which are responsible for a specific biological or biochemical effect, and also to <span class="has-text-weight-bold is-italic">define</span> and <span class="has-text-weight-bold is-italic">characterize</span> these substances as accurately as possible.<br>—<em>Arne Tiselius, 1948 Nobel Lecture</em><small> <sup><a id="Tiselius1948" href="#references">1</a></sup><br>(Photo: <a target="_new" href="https://digitaltmuseum.se/011014036836/professor-arne-tiselius-i-arbete-uppsala-1955">digitaltmuseum.se</a>)</small>
           </div>
         </article>
       </div>
-      <div class="column is-2">
+      <div class="column is-3">
         <img src="./images/ArneTiselius.jpg" alt="Arne Tiselius">
       </div>
     </div>
     <div class="columns">
       <div class="column">
         <p>
-        Today, gel electrophoresis is used on a daily basis in biology labs worldwide to isolate, define, and characterize biomolecules. Electrophoresis is a powerful and versatile technique that is remarkably precise, yet very gentle on the molecules being analyzed. However, one major drawback is that the method can be difficult to learn. Gels must be prepared by carrying out a detailed protocol with many time-sensitive steps. Interpreting the resulting gel data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract, often ambiguous, and easily confounded by subtle errors in gel preparation.
+        Today, gel electrophoresis is used on a daily basis in biology labs worldwide to isolate, define, and characterize biomolecules. Electrophoresis is a powerful and versatile technique that is remarkably precise, yet very gentle on the molecules being analyzed. Unfortunately, the method can be difficult to learn. The feedback loop is slow, and mistakes only become evident hours after they occurred.
+        </p>
+        <br>
+        <p>
+        Before a researcher can even reach the interpretation stage, gels must be prepared according to protocols with many time-sensitive steps. Subtle variations can dramatically affect the mobility of molecules. For example, here is how the same 1kb ladder migrates on three gels that were cast with different buffers.
         </p>
       </div>
     </div>
-    <div class="container box">
-    <div class="columns">
-      <div class="column">
-        <img src="./images/calibration-gels-crop.png" alt="Three gels">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-10 is-offset-1">
+          <div class="columns is-centered">
+            <div class="column has-text-centered is-size-7">
+              <figure class="image"><img src="./images/gel1.png" alt="Gel 1"></figure>
+              <strong>400mM Tris</strong>, 20mM acetic acid, 1mM EDTA
+            </div>
+
+            <div class="column has-text-centered is-size-7">
+              <figure class="image"><img src="./images/gel2.png" alt="Gel 2"></figure>
+              40mM Tris, <strong>200mM acetic acid</strong>, 1mM EDTA
+            </div>
+            <div class="column has-text-centered is-size-7">
+              <figure class="image"><img src="./images/gel3.png" alt="Gel 3"></figure>
+              <strong>Water</strong> only
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="columns">
-      <div class="column">
-        <p class="has-text-black">Identical samples (1kb ladders) run on different gels cast with different buffers can yield dramatically different results. Left: TAE with 10-fold excess Tris (400mM Tris, 20mM acetic acid, 1mM EDTA), Center: TAE with 10-fold excess acetic acid (40mM Tris, 200mM acetic acid, 1mM EDTA), Right: gel cast with water only.</p>
-      </div>
-    </div>
-  </div>
+    <br>
     <div class="columns">
       <div class="column">
         <p>
-        Moreover, the feedback loop when learning gel electrophoresis is slow—mistakes only become evident upon data collection hours after they occurred, and in practice it's difficult to run more than a couple gels each day. These challenges can frustrate budding scientists, may interfere with scientific reproducibility, and impede overall research progress.
+        Interpreting gel data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous.
+
+        These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
+
         </p>
+        <br>
         <p>
-        Of course, gel electrophoresis not the only example of a complex system with hidden behaviors in scientific research, nor are we are not the first to recognize the problem. We have been inspired by many other works, most notably Author1's work on Subject1,<sup><a id="inspire1" href="#references">2</a></sup>, Author2's work on Subject2<sup><a id="inspire2" href="#references">3</a></sup>, and Author3's work on Subject3.<sup><a id="inspire3" href="#references">4</a></sup>
+        We believe interactive simulation and visualization tools can help. Here we preesent <span class="has-text-weight-semibold">Gelbox</span> is a dynamic “scientific sandbox” for visualizing the link between gel band patterns and sample molecules. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways. We hope <span class="has-text-weight-semibold">Gelbox</span> will offer a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
         </p>
+        <br>
         <p>
-        We believe interactive simulation and visualization tools can help overcome these challenges by providing alternative routes to understanding complex processes like gel electrophoresis. <span class="has-text-weight-semibold">Gelbox</span> is a dynamic “scientific sandbox” for visualizing the link between gel band patterns and sample molecules. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways. We hope <span class="has-text-weight-semibold">Gelbox</span> will offer a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
+        Gel electrophoresis not the only example of a complex system with hidden behaviors in scientific research. This project builds on on Earth Primer We have been inspired by many other works, most notably Author1's work on Subject1,<sup><a id="inspire1" href="#references">2</a></sup>, Author2's work on Subject2<sup><a id="inspire2" href="#references">3</a></sup>, and Author3's work on Subject3.<sup><a id="inspire3" href="#references">4</a></sup>
+        </p>
+        <br>
+        <p>
         </p>
       </div>
     </div>
     <br>
     <!-- End of Introduction -->
-    <h1 id="interface" class="title is-4">The Interface <a href="#interface">•</a></h1>
-    <br>
-    <div class="columns">
-      <div class="column is-12">
-        <img src="./images/gelbox-views.png" alt="Gel view">
+    <h1 id="interface" class="title is-3">The Gelbox Interface <a href="#interface">•</a></h1>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="columns is-gapless">
+            <div class="column is-narrow has-text-centered">
+              <img src="./images/interface1.png" alt="Gel">
+            </div>
+            <div class="column is-narrow has-text-centered">
+              <img src="./images/interface2.png" alt="Molecules">
+            </div>
+            <div class="column is-narrow has-text-centered">
+              <img src="./images/interface3.png" alt="Inspector">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <br>
     <br>
     <!-- End of Interface -->
     <div class="container box message">
