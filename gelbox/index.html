@@ -114,11 +114,11 @@
     <div class="columns">
       <div class="column">
         <p>
-        Today, gel electrophoresis is used on a daily basis in biology labs worldwide to isolate, define, and characterize biomolecules. Electrophoresis is a powerful and versatile technique that is remarkably precise, yet very gentle on the molecules being analyzed. Unfortunately, the method can be difficult to learn. The feedback loop is slow, and mistakes only become evident hours after they occurred.
+        Today, gel electrophoresis is used on a daily basis in biology labs worldwide to isolate, define, and characterize biomolecules. Electrophoresis is a powerful and versatile technique that is remarkably precise, yet very gentle on the molecules being analyzed. Unfortunately, the method can be difficult to learn.
         </p>
         <br>
         <p>
-        Before a researcher can even reach the interpretation stage, gels must be prepared according to protocols with many time-sensitive steps. Subtle variations can dramatically affect the mobility of molecules. For example, here is how the same 1kb ladder migrates on three gels that were cast with different buffers.
+        First, gels must be prepared according to detailed protocols. Subtle variations in timing of a step or the amount of an ingredient can dramatically affect gel behavior. For example, we ran the same 1kb ladder samples on three gels that were prepared with different buffers. The degree of band mobility, smearing, and distortion is very different for each gel.
         </p>
       </div>
     </div>
@@ -147,18 +147,15 @@
     <div class="columns">
       <div class="column">
         <p>
-        Interpreting gel data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous.
-
-        These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
-
+        The feedback loop is slow, and mistakes only become evident hours after they occurred. Even when gels are prepared and run successfully, interpreting gel data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
         </p>
         <br>
         <p>
-        We believe interactive simulation and visualization tools can help. Here we preesent <span class="has-text-weight-semibold">Gelbox</span> is a dynamic “scientific sandbox” for visualizing the link between gel band patterns and sample molecules. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways. We hope <span class="has-text-weight-semibold">Gelbox</span> will offer a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
+        We believe interactive simulation and visualization tools can help. Here we present <span class="has-text-weight-semibold">Gelbox</span>, a dynamic “scientific sandbox” for visualizing the relationships between gel bands, sample molecules, and the setup of the gel. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways. We hope to offer a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
         </p>
         <br>
         <p>
-        Gel electrophoresis not the only example of a complex system with hidden behaviors in scientific research. This project builds on on Earth Primer We have been inspired by many other works, most notably Author1's work on Subject1,<sup><a id="inspire1" href="#references">2</a></sup>, Author2's work on Subject2<sup><a id="inspire2" href="#references">3</a></sup>, and Author3's work on Subject3.<sup><a id="inspire3" href="#references">4</a></sup>
+        This project builds on concepts from <span class="has-text-weight-semibold">Earth Primer</span>, an interactive geology science book by Gingold<sup><a id="earthprimer" href="#references">2</a></sup>. We have been greatly inspired by many other works, including <span class="has-text-weight-semibold">Up and Down the Ladder of Abstraction</span> by Bret Victor<sup><a id="inspire1" href="#references">3</a></sup>, <span class="has-text-weight-semibold">Parable of the Polygons</span> by Vi Hart and Nicky Case<sup><a id="inspire2" href="#references">4</a></sup>, and other projects<sup><a id="inspire3" href="#references">5–7</a></sup>.
         </p>
         <br>
         <p>
@@ -188,8 +185,8 @@
     <br>
     <br>
     <!-- End of Interface -->
-    <div class="container box message">
     <h1 id="commands" class="title is-3">Commands &amp; Shortcuts <a href="#commands">•</a></h1>
+    <div class="container box message">
     <h3 class="title is-4">Bands</h3>
     <div class="columns">
       <div class="column">
@@ -319,7 +316,7 @@
               </figure>
           </div>
           <div class="card-content">
-            <p class="title is-4">Add fixed loupe</p>
+            <p class="title is-4">Fixed loupe</p>
             <p class="subtitle is-6">Hold ⌘ key and click on gel. Reposition or delete.</p>
           </div>
         </div>
@@ -374,7 +371,7 @@
   </div>
     <!-- End of Commands -->
     <h1 id="sim" class="title is-4">Under the hood <a href="#sim">•</a></h1>
-    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we relied on expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" class="has-text-weight-semibold" href="#references">5</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" class="has-text-weight-semibold" href="#references">6</a></sup>.
+    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we relied on expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" class="has-text-weight-semibold" href="#references">8</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" class="has-text-weight-semibold" href="#references">9</a></sup>.
     </p>
     <br><br>
     <!-- End of Commands -->
@@ -388,9 +385,12 @@
     </div>
     <ol>
       <li>A. Tiselius, Electrophoresis and Adsorption Analysis as Aids in Investigations of Large Molecular Weight Substances and Their Breakdown Products, 1948 Nobel Lecture <a href="#Tiselius1948"><i class="fal fa-level-up"></i></a></li>
-      <li>Inspiration 1 <a href="#inspire1"><i class="fal fa-level-up"></i></a></li></li>
-      <li>Inspiration 2 <a href="#inspire2"><i class="fal fa-level-up"></i></a></li></li>
-      <li>Inspiration 3 <a href="#inspire3"><i class="fal fa-level-up"></i></a></li></li>
+      <li>C. Gingold, <a href="http://www.earthprimer.com/">Earth Primer</a>, 2015. <a href="#earthprimer"><i class="fal fa-level-up"></i></a>
+      <li>B. Victor, <a href="http://worrydream.com/LadderOfAbstraction/">Up and Down the Ladder of Abstraction</a>, 2011. <a href="#inspire1"><i class="fal fa-level-up"></i></a></li>
+      <li>V. Hart and N. Case, <a href="https://ncase.me/polygons/">Parable of the Polygons</a>, 2014 <a href="#inspire2"><i class="fal fa-level-up"></i></a></li>
+      <li><a href="https://explorabl.es/">Explorable Explanations</a> <a href="#inspire3"><i class="fal fa-level-up"></i></a></li></li>
+      <li>Inspiration 4 <a href="#inspire4"><i class="fal fa-level-up"></i></a></li></li>
+      <li>Inspiration 5 <a href="#inspire5"><i class="fal fa-level-up"></i></a></li></li>
       <li>D.H. Van Winkle, A. Beheshti, R.L. Rill, DNA electrophoresis in agarose gels: A simple relation describing the length dependence of mobility, 2002 <em>Electrophoresis</em> 23, 15–19 <a href="#VanWinkle2002"><i class="fal fa-level-up"></i></a></li>
       <li>A. Beheshti, DNA electrophoresis in agarose gels: A new mobility vs. DNA length dependence, 2002 <em>Dissertation, The Florida State University</em> <a href="#Beheshti2002"><i class="fal fa-level-up"></i></a></li>
     </ol>
