@@ -13,7 +13,7 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-      <div class="column is-10 is-offset-1">
+      <div class="column is-offset-3">
         <figure class="image">
             <video autoplay="true" loop="true">
             <source src="./images/gelboxloop.webm" type="video/webm">
@@ -22,20 +22,13 @@
         </figure>
       </div>
     </div>
+  </div>
+  <div class="container">
     <div class="columns">
       <div class="column is-8">
         <h1 class="title is-spaced">
           Gelbox
         </h1>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8">
-<!--         <h1 class="title is-spaced">
-          Gelbox
-        </h1> -->
         <div class="columns">
           <div class="column is-3">
             <p class="is-marginless">
@@ -60,6 +53,9 @@
           </div>
         </div>
       </div>
+      <div class="column is-offset-2" style="padding-bottom: 0;">
+        <img src="./images/icon128.png">
+      </div>
     </div>
     <div class="columns">
       <div class="column is-2">
@@ -68,6 +64,7 @@
       <div class="column">
         Gel electrophoresis enables separation and visualization of biomolecules such as DNA, RNA, or proteins. Like many powerful tools, effective use of gels can be difficult to learn. <span class="has-text-weight-semibold">Gelbox</span> is a simulation tool to help build intuition for the relationships between experimental input parameters and resulting data output from gel electrophoresis. Our simulation model handles a wide range of settings, including many "suboptimal" values that may be useful for troubleshooting common mistakes by novices.
       </div>
+
     </div>
     <div class="columns">
       <div class="column is-2">
@@ -86,13 +83,16 @@
 </section>
 <section class="section">
   <div class="container">
-    <h1 id="quickstart" class="title is-3">Quick Start <a href="#quickstart">•</a></h1>
-    <p>Video coming soon.</p>
-</div>
+    <h1 id="quickstart" class="title is-4">Quick Start <a href="#quickstart">•</a></h1>
+    <div class="columns">
+      <div class="column is-10 is-offset-1">video will go here
+      </div>
+    </div>
+  </div>
 </section>
-<section class="section">
+<section>
   <div class="container">
-    <h1 id="introduction" class="title is-3">Introduction <a href="#introduction">•</a></h1>
+    <h1 id="introduction" class="title is-4">Introduction <a href="#introduction">•</a></h1>
     <div class="columns">
       <div class="column">
         <p>In 1948, when Arne Tiselius was awarded Nobel Prize in Chemistry for his pioneering work on electrophoresis, he summarized his motivations for the work as follows:
@@ -100,10 +100,10 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column is-10">
-        <article class="message is-notification">
+      <div class="column is-8 is-offset-1">
+        <article class="message is-success">
           <div class="message-body">
-            [In  biochemistry] some of the most important problems are to <span class="has-text-weight-bold is-italic">isolate</span> the substances which are responsible for a specific biological or biochemical effect, and also to <span class="has-text-weight-bold is-italic">define</span> and <span class="has-text-weight-bold is-italic">characterize</span> these substances as accurately as possible.—<em>Arne Tiselius, 1948 Nobel Lecture</em><small> <sup><a id="Tiselius1948" href="#references">1</a></sup><br>(Photo: <a target="_new" href="https://digitaltmuseum.se/011014036836/professor-arne-tiselius-i-arbete-uppsala-1955">digitaltmuseum.se</a>)</small>
+            [In  biochemistry] some of the most important problems are to <span class="has-text-weight-bold is-italic">isolate</span> the substances which are responsible for a specific biological or biochemical effect, and also to <span class="has-text-weight-bold is-italic">define</span> and <span class="has-text-weight-bold is-italic">characterize</span> these substances as accurately as possible. —<em>Arne Tiselius, 1948 Nobel Lecture</em><small> <sup><a id="Tiselius1948" href="#references">1</a></sup> (Photo: <a target="_new" href="https://digitaltmuseum.se/011014036836/professor-arne-tiselius-i-arbete-uppsala-1955">digitaltmuseum.se</a>)</small>
           </div>
         </article>
       </div>
@@ -114,11 +114,11 @@
     <div class="columns">
       <div class="column">
         <p>
-        Today, gel electrophoresis is used in biology labs worldwide to isolate, define, and characterize biomolecules. Electrophoresis is a powerful and versatile technique that is remarkably precise, yet very gentle on the molecules being analyzed. Unfortunately, the method can be difficult to learn.
+        Today, gel electrophoresis is used in biology labs worldwide to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet gentle on the molecules being analyzed. Unfortunately, it has at least one big drawback: it can be difficult to master.
         </p>
         <br>
         <p>
-        First, gels must be prepared according to detailed protocols. Subtle variations in the amount of an ingredient or the timing of a step can dramatically affect gel behavior. To illustrate this concept, we ran identical 1kb ladder samples on three agarose gels that were prepared with different buffers. We observed that the degree of band mobility, smearing, and distortion varied greatly for each gel.
+        First, gels must be prepared according to detailed protocols. Small variations in the amount of an ingredient or the timing of a step can dramatically affect gel behavior. To illustrate this concept, we ran identical 1kb ladder samples on three agarose gels that were prepared with different buffers. We observed that the degree of band mobility, smearing, and distortion varied greatly for each gel.
         </p>
       </div>
     </div>
@@ -147,18 +147,11 @@
     <div class="columns">
       <div class="column">
         <p>
-        The feedback loop is slow in learning gels, and mistakes only become evident hours after they occurred. Even when gels are prepared and run successfully, interpreting the data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
+        Even when gels are prepared and run successfully, interpreting the data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
         </p>
         <br>
         <p>
-        We believe interactive simulation and visualization tools can help. We have created <span class="has-text-weight-semibold">Gelbox</span>, a dynamic “scientific sandbox” for visualizing the relationships between gel bands, sample molecules, and the setup of the gel. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways. We hope this tool offers a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
-        </p>
-        <br>
-        <p class="box">
-History of gel "simulation" and classic limitations
-- single static view vs multiple linked representations
-- offers size only (most trivial aspect)
-- too perfect, no mistakes
+        We believe interactive simulation and visualization tools can help. We have created <span class="has-text-weight-semibold">Gelbox</span>, a dynamic “scientific sandbox” for visualizing the relationships between gel bands, sample molecules, and the gel itself. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways.
         </p>
         <br>
         <p>
@@ -172,7 +165,7 @@ History of gel "simulation" and classic limitations
     </div>
     <br>
     <!-- End of Introduction -->
-    <h1 id="interface" class="title is-3">The Gelbox Interface <a href="#interface">•</a></h1>
+    <h1 id="interface" class="title is-4">The Gelbox Interface <a href="#interface">•</a></h1>
     <div class="container">
       <div class="columns">
         <div class="column">
@@ -193,7 +186,7 @@ History of gel "simulation" and classic limitations
     <br>
     <br>
     <!-- End of Interface -->
-    <h1 id="commands" class="title is-3">Commands &amp; Shortcuts <a href="#commands">•</a></h1>
+    <h1 id="commands" class="title is-4">Commands &amp; Shortcuts <a href="#commands">•</a></h1>
     <div class="container box message">
     <h3 class="title is-4">Bands</h3>
     <div class="columns">
@@ -376,22 +369,36 @@ History of gel "simulation" and classic limitations
       </div>
     </div>
     <br>
-  </div>
+    </div>
     <!-- End of Commands -->
-    <h1 id="sim" class="title is-4">Under the hood <a href="#sim">•</a></h1>
+    <h1 id="discussion" class="title is-4">Discussion <a href="#discussion">•</a></h1>
+    <p>
+      Other gel simulation
+History of gel "simulation" and classic limitations
+- single static view vs multiple linked representations
+- offers size only (most trivial aspect)
+- too perfect, no mistakes
+    </p>
+    <p>
+      Gels have a slow feedback loop — the time between making a mistake and observing its effects can be several hours.
+    </p>
+
+    <p>
+      <li>limited first pass on simulation
+      <li>initial focus was on the representation
+    </p>
+
     <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" class="has-text-weight-semibold" href="#references">8</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" class="has-text-weight-semibold" href="#references">9</a></sup>.
     </p>
+
+    <p>
+    We hope this tool offers a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
+    </p>
     <br><br>
+    <!-- End of Discussion -->
     <!-- End of Under the hood -->
-    <h1 id="sim" class="title is-4">Limitations and Caveats <a href="#sim">•</a></h1>
-    <p>
-      limited first pass on simulation
-    </p>
-    <p>
-      initial focus was on the representation
-    </p>
-    <br><br>
-    <!-- End of Limitations and Caveats -->
+    <h1 id="acks" class="title is-4">Acknowledgements <a href="#acks">•</a></h1>
+
     <div class="level">
       <div class="level-left"><h1 id="references" class="title is-4">References <a href="#references">•</a></h1></div>
       <div class="level-right">
@@ -400,15 +407,24 @@ History of gel "simulation" and classic limitations
         </div>
       </div>
     </div>
-    <ol>
-      <li>A. Tiselius, Electrophoresis and Adsorption Analysis as Aids in Investigations of Large Molecular Weight Substances and Their Breakdown Products, 1948 Nobel Lecture <a href="#Tiselius1948"><i class="fal fa-level-up"></i></a></li>
-      <li>C. Gingold, <a href="http://www.earthprimer.com/">Earth Primer</a>, 2015. <a href="#earthprimer"><i class="fal fa-level-up"></i></a>
-      <li>B. Victor, <a href="http://worrydream.com/LadderOfAbstraction/">Up and Down the Ladder of Abstraction</a>, 2011. <a href="#inspire1"><i class="fal fa-level-up"></i></a></li>
-      <li>V. Hart and N. Case, <a href="https://ncase.me/polygons/">Parable of the Polygons</a>, 2014 <a href="#inspire2"><i class="fal fa-level-up"></i></a></li>
-      <li><a href="https://explorabl.es/">Explorable Explanations</a> <a href="#inspire3"><i class="fal fa-level-up"></i></a></li></li>
-      <li>Inspiration 4 <a href="#inspire4"><i class="fal fa-level-up"></i></a></li></li>
-      <li>Inspiration 5 <a href="#inspire5"><i class="fal fa-level-up"></i></a></li></li>
-      <li>D.H. Van Winkle, A. Beheshti, R.L. Rill, DNA electrophoresis in agarose gels: A simple relation describing the length dependence of mobility, 2002 <em>Electrophoresis</em> 23, 15–19 <a href="#VanWinkle2002"><i class="fal fa-level-up"></i></a></li>
-      <li>A. Beheshti, DNA electrophoresis in agarose gels: A new mobility vs. DNA length dependence, 2002 <em>Dissertation, The Florida State University</em> <a href="#Beheshti2002"><i class="fal fa-level-up"></i></a></li>
-    </ol>
+    <div class="columns">
+      <div class="column is-narrow">
+        <div style="width: 1rem;"></div> <!-- empty column to indent references -->
+      </div>
+      <div class="column">
+        <ol>
+          <li>A. Tiselius, Electrophoresis and Adsorption Analysis as Aids in Investigations of Large Molecular Weight Substances and Their Breakdown Products, 1948 Nobel Lecture <a href="#Tiselius1948"><i class="fal fa-level-up"></i></a></li>
+          <li>C. Gingold, <a href="http://www.earthprimer.com/">Earth Primer</a>, 2015. <a href="#earthprimer"><i class="fal fa-level-up"></i></a></li>
+          <li>B. Victor, <a href="http://worrydream.com/LadderOfAbstraction/">Up and Down the Ladder of Abstraction</a>, 2011. <a href="#inspire1"><i class="fal fa-level-up"></i></a></li>
+          <li>V. Hart and N. Case, <a href="https://ncase.me/polygons/">Parable of the Polygons</a>, 2014 <a href="#inspire2"><i class="fal fa-level-up"></i></a></li>
+          <li><a href="https://explorabl.es/">Explorable Explanations</a>, curated by N. Case <i>et al.</i>, 2015. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
+          <li><a href="https://www.desmos.com/">Desmos</a> Calculator, 2011. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
+          <li>The Concord Consortium, <a href="http://mw.concord.org">Molecular Workbench</a>. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
+          <li>D.H. Van Winkle, A. Beheshti, R.L. Rill, DNA electrophoresis in agarose gels: A simple relation describing the length dependence of mobility, 2002 <em>Electrophoresis</em> 23, 15–19 <a href="#VanWinkle2002"><i class="fal fa-level-up"></i></a></li>
+          <li>A. Beheshti, DNA electrophoresis in agarose gels: A new mobility vs. DNA length dependence, 2002 <em>Dissertation, The Florida State University</em> <a href="#Beheshti2002"><i class="fal fa-level-up"></i></a></li>
+        </ol>
+      </div>
+    </div>
+    <!-- End of References -->
+  </div>
 </section>
