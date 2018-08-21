@@ -425,14 +425,14 @@
     </p>
     <br>
     <p>
-      Several gel simulators have been created as part of larger software packages used to assist with gene editing and DNA cloning<sup><a id="othersims" href="#references">8–10</a></sup>. These tools typically provide one static graphical representation of predicted DNA fragments under perfect experimental conditions. By contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentation, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture ways in which gels can be imperfect or fail.
+      Several gel simulators have been created as part of larger software packages used to assist with gene editing and DNA cloning<sup><a id="othersims" href="#references">8–11</a></sup>. These tools typically provide one static graphical representation of predicted DNA fragments under perfect experimental conditions. By contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentation, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture ways in which gels can be imperfect or fail.
     </p>
     <br>
     <p>
       Gelbox has several limitations. First, the simulation model is limited and incomplete. We spent most of our effort on developing the various representations, and only made a limited attempt to calibrate the simulation parameters. Thus, the predicted band mobility and behavior may not match real-world results. Future work could extend the model to include more paramters or conditions.
     </p>
     <br>
-    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">11</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">12</a></sup>.
+    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>.
     </p>
     <br>
     <p>
@@ -443,7 +443,8 @@
     <!-- End of Under the hood -->
     <h1 id="acks" class="title is-4">Acknowledgements <a href="#acks">•</a></h1>
     <p>
-    We thank J.Brown for assistance with the Icon and Quick Start introductory video, and P.Nafisi for running calibration gels. We thank P. Rothemund and N.Case for early testing and comments. This work was supported by <a target="_new" href="http://www.pewtrusts.org/en/projects/pew-stewart-scholars-for-cancer-research">Pew-Stewart Scholars Program for Cancer Research</a>, the National Science Foundation <a target="_new" href="https://ccc.ucsf.edu/">Center for Cellular Construction</a> (<a target="_new" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1548297">DBI 1548297</a>), and the UCSF <a target="_new" href="http://pbbr.ucsf.edu/">Program for Breakthrough Biomedical Research</a>, which is partially funded by the Sandler Foundation.
+    We thank <span class="has-text-weight-semibold">J.Brown</span> for assistance with the app icon and Quick Start video, and <span class="has-text-weight-semibold">P.Nafisi</span> for running several gels used to calibrate the simulation model. We thank <span class="has-text-weight-semibold">P. Rothemund</span> and <span class="has-text-weight-semibold">N.Case</span> for helpful feedback and suggestions.
+    This work was supported by <a target="_new" href="http://www.pewtrusts.org/en/projects/pew-stewart-scholars-for-cancer-research">Pew-Stewart Scholars Program for Cancer Research</a>, the National Science Foundation <a target="_new" href="https://ccc.ucsf.edu/">Center for Cellular Construction</a> (<a target="_new" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1548297">DBI 1548297</a>), and the UCSF <a target="_new" href="http://pbbr.ucsf.edu/">Program for Breakthrough Biomedical Research</a>, which is partially funded by the Sandler Foundation.
     </p>
     <br><br>
     <div class="level">
@@ -467,9 +468,10 @@
           <li><a href="https://explorabl.es/">Explorable Explanations</a>, curated by N. Case <i>et al.</i>, 2015. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
           <li><a href="https://www.desmos.com/">Desmos</a> Calculator, 2011. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
           <li>The Concord Consortium, <a href="http://mw.concord.org">Molecular Workbench</a>. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
-          <li>DNAstar, <a href="https://www.dnastar.com/genequest_help/Documents/agarosegelsimulation.htm">Agarose Gel Simulations</a>. <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
+          <li>DNAstar, <a href="https://www.dnastar.com/genequest_help/Documents/agarosegelsimulation.htm">Agarose Gel Simulations</a>, 2017. <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
           <li>Snapgene, <a href="http://www.snapgene.com/support/user_guide/agarose_gel_simulation/Simulate_an_Agarose_Gel/">Simulate an Agarose Gel</a>. <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
-          <li>Genome Compiler, <a href="http://www.genomecompiler.com/virtual-gel-simulation/">Virtual Gel Simulation</a>. <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
+          <li>Genome Compiler, <a href="http://www.genomecompiler.com/virtual-gel-simulation/">Virtual Gel Simulation</a>, 2016 <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
+          <li>MacVector, <a href="http://www.macvector.com/MacVector/agarosegelsimulation.html">Agarose Gel Simulation</a>, Retrieved 2018.
           <li>D.H. Van Winkle, A. Beheshti, R.L. Rill, DNA electrophoresis in agarose gels: A simple relation describing the length dependence of mobility, 2002 <em>Electrophoresis</em> 23, 15–19 <a href="#VanWinkle2002"><i class="fal fa-level-up"></i></a></li>
           <li>A. Beheshti, DNA electrophoresis in agarose gels: A new mobility vs. DNA length dependence, 2002 <em>Dissertation, The Florida State University</em> <a href="#Beheshti2002"><i class="fal fa-level-up"></i></a></li>
         </ol>
@@ -478,3 +480,35 @@
     <!-- End of References -->
   </div>
 </section>
+
+<br>
+<br>
+<br>
+
+<footer class="footer" style="background-color: #222222">
+  <div class="container">
+    <div class="content has-text-centered has-text-white">
+      <p>
+       <a style="color:#2fa9fa" href="http://bionano.ucsf.edu/">DouglasLab</a><br>@ <a style="color:#2fa9fa" href="https://www.ucsf.edu/">UCSF</a>
+      </p>
+      <p>
+        <a target="blank" style="color:#2fa9fa" href="https://twitter.com/smd4">
+          <span class="icon is-size-5">
+            <i class="fab fa-twitter"></i>
+          </span>
+        </a>
+        <a target="blank" style="color:#2fa9fa" href="https://github.com/douglaslab">
+          <span class="icon is-size-4">
+            <i class="fab fa-github"></i>
+          </span>
+        </a>
+     </p>
+     <br><br><br><br><br><br>
+     <p>
+      <small style="color:#666666">Made with <a style="color:#999999" href="https://bulma.io/">Bulma</a></small>
+     </p>
+   </div>
+ </div>
+</footer>
+</body>
+</html>
