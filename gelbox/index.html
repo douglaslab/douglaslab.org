@@ -377,7 +377,7 @@
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Save gel</p>
-            <p class="subtitle is-6">⌘-S will save a json file with the extension ".gelbox"</p>
+            <p class="subtitle is-6">⌘-S will save a file with extension ".json"</p>
           </div>
         </div>
       </div>
@@ -393,7 +393,7 @@
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Save Sample</p>
-            <p class="subtitle is-6">⌘-Option-S will save a json file with the extension ".gelsample"</p>
+            <p class="subtitle is-6">⌘-Option-S will save a sample file with extension ".json"</p>
           </div>
         </div>
       </div>
@@ -403,7 +403,7 @@
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Load Sample</p>
-            <p class="subtitle is-6">Drag a ".gelsample" file into window, or drop it into a specific lane.</p>
+            <p class="subtitle is-6">Drag a gel ".json" file onto the window, or drag a sample ".json" file into the desired lane.</p>
           </div>
         </div>
       </div>
@@ -411,7 +411,7 @@
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Load image</p>
-            <p class="subtitle is-6">Drag image (png, jpg, gif) file into window.</p>
+            <p class="subtitle is-6">Drag image (file extensions: png, jpg, gif) file onto the window.</p>
           </div>
         </div>
       </div>
@@ -421,26 +421,22 @@
     <!-- End of Commands -->
     <h1 id="discussion" class="title is-4">Discussion <a href="#discussion">•</a></h1>
     <p>
-      Other gel simulation
-History of gel "simulation" and classic limitations
-- single static view vs multiple linked representations
-- offers size only (most trivial aspect)
-- too perfect, no mistakes
+      Running real gels in the laboratory is constrained by a slow feedback loop. The time between making a mistake in preparing a gel and observing its effects can be several hours. Computer simulation can reduce the time between modifying a gel parameter and observing the effects to fractions of a second. The rapid feedback makes cause-and-effect relationships visible and explicit. We expect that Gelbox may be useful to students with limited prior experience with gel electrophoresis for quickly gaining some basic intuition for interpreting gel data and troubleshooting problematic experimental conditions. Gelbox may also be useful for mentors as a pedagogical aid.
     </p>
+    <br>
     <p>
-      Gels have a slow feedback loop — the time between making a mistake and observing its effects can be several hours.
+      Several gel simulators have been created as part of larger software packages used to assist with gene editing and DNA cloning<sup><a id="othersims" href="#references">8–10</a></sup>. These tools typically provide one static graphical representation of predicted DNA fragments under perfect experimental conditions. By contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentation, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture ways in which gels can be imperfect or fail.
     </p>
-
+    <br>
     <p>
-      <li>limited first pass on simulation
-      <li>initial focus was on the representation
+      Gelbox has several limitations. First, the simulation model is limited and incomplete. We spent most of our effort on developing the various representations, and only made a limited attempt to calibrate the simulation parameters. Thus, the predicted band mobility and behavior may not match real-world results. Future work could extend the model to include more paramters or conditions.
     </p>
-
-    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" class="has-text-weight-semibold" href="#references">8</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" class="has-text-weight-semibold" href="#references">9</a></sup>.
+    <br>
+    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">11</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">12</a></sup>.
     </p>
-
+    <br>
     <p>
-    We hope this tool offers a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings.
+    We hope Gelbox offers a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings. Moreover, we hope our work inspires others to build interactive simulations to teach complex systems and tools. We welcome feedback and bug reports.
     </p>
     <br><br>
     <!-- End of Discussion -->
@@ -468,6 +464,9 @@ History of gel "simulation" and classic limitations
           <li><a href="https://explorabl.es/">Explorable Explanations</a>, curated by N. Case <i>et al.</i>, 2015. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
           <li><a href="https://www.desmos.com/">Desmos</a> Calculator, 2011. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
           <li>The Concord Consortium, <a href="http://mw.concord.org">Molecular Workbench</a>. <a href="#inspire3"><i class="fal fa-level-up"></i></a></li>
+          <li>DNAstar, <a href="https://www.dnastar.com/genequest_help/Documents/agarosegelsimulation.htm">Agarose Gel Simulations</a>. <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
+          <li>Snapgene, <a href="http://www.snapgene.com/support/user_guide/agarose_gel_simulation/Simulate_an_Agarose_Gel/">Simulate an Agarose Gel</a>. <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
+          <li>Genome Compiler, <a href="http://www.genomecompiler.com/virtual-gel-simulation/">Virtual Gel Simulation</a>. <a href="#othersims"><i class="fal fa-level-up"></i></a></li>
           <li>D.H. Van Winkle, A. Beheshti, R.L. Rill, DNA electrophoresis in agarose gels: A simple relation describing the length dependence of mobility, 2002 <em>Electrophoresis</em> 23, 15–19 <a href="#VanWinkle2002"><i class="fal fa-level-up"></i></a></li>
           <li>A. Beheshti, DNA electrophoresis in agarose gels: A new mobility vs. DNA length dependence, 2002 <em>Dissertation, The Florida State University</em> <a href="#Beheshti2002"><i class="fal fa-level-up"></i></a></li>
         </ol>
