@@ -20,6 +20,14 @@
 <section class="section">
   <div class="container">
     <div class="columns">
+      <div class="column has-text-centered">
+        <img src="./images/video-placeholder-1920x1080.png" alt="QuickStart video">
+      </div>
+    </div>
+  </div>
+  <br><br>
+<!--   <div class="container">
+    <div class="columns">
       <div class="column is-offset-3">
         <figure class="image">
             <video autoplay="true" loop="true">
@@ -29,7 +37,7 @@
         </figure>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="container">
     <div class="columns">
       <div class="column is-8">
@@ -76,20 +84,11 @@
       </div>
       <div class="column">
         <!-- <a class="button is-warning">macOS</a> <a class="button is-warning">Win</a> <a class="button is-warning">GitHub</a> -->
-        <a class="button is-primary"><i class="fas fa-fw fa-arrow-to-bottom"></i> macOS</a>
+        <a class="button" href="./files/gelbox1.0.dmg" target=”_blank" onclick="ga('send', 'event', 'macOS', 'download');"><i class="fas fa-fw fa-arrow-to-bottom"></i> macOS</a>
         <a class="button" href="https://github.com/douglaslab/gelbox/"><i class="fab fa-fw fa-github"></i>&nbsp;Source</a>
       </div>
-      <div class="column is-7">
+      <div class="column has-text-right">
         <a class="button" href="./presskit/"><i class="far fa-fw fa-bullhorn"></i>&nbsp;Press kit</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <h1 id="quickstart" class="title is-4">Quick Start <a href="#quickstart">•</a></h1>
-    <div class="columns">
-      <div class="column is-10 is-offset-1">video will go here
       </div>
     </div>
   </div>
@@ -97,28 +96,27 @@
 <section>
   <div class="container">
     <h1 id="introduction" class="title is-4">Introduction <a href="#introduction">•</a></h1>
+
     <div class="columns">
-      <div class="column">
-        <p>In 1948, when Arne Tiselius was awarded Nobel Prize in Chemistry for his pioneering work on electrophoresis, he summarized his motivations for the work as follows:
+      <div class="column is-9">
+        <p>In 1948, when Arne Tiselius was awarded Nobel Prize in Chemistry for his pioneering work on electrophoresis, here is how he summarized his motivations for the work:
         </p>
+        <br>
+        <div class="columns">
+        <div class="column is-10 is-offset-2 has-background-light is-italic" style="font-size:.9rem;">
+          [In  biochemistry] some of the most important problems are to <span class="has-text-weight-bold">isolate</span> the substances which are responsible for a specific biological or biochemical effect, and also to <span class="has-text-weight-bold">define</span> and <span class="has-text-weight-bold">characterize</span> these substances as accurately as possible.<br>—<em style="font-style: normal !important;">Arne Tiselius, 1948 Nobel Lecture<sup><a id="Tiselius1948" href="#references">1</a></sup> <small>(photo credit:
+        <a target="_new" href="https://digitaltmuseum.se/011014036836/professor-arne-tiselius-i-arbete-uppsala-1955">digitaltmuseum.se</a>)</small></em>
+        </div>
       </div>
-    </div>
-    <div class="columns">
-      <div class="column is-8 is-offset-1">
-        <article class="message is-success">
-          <div class="message-body">
-            [In  biochemistry] some of the most important problems are to <span class="has-text-weight-bold is-italic">isolate</span> the substances which are responsible for a specific biological or biochemical effect, and also to <span class="has-text-weight-bold is-italic">define</span> and <span class="has-text-weight-bold is-italic">characterize</span> these substances as accurately as possible. —<em>Arne Tiselius, 1948 Nobel Lecture</em><small> <sup><a id="Tiselius1948" href="#references">1</a></sup> (Photo: <a target="_new" href="https://digitaltmuseum.se/011014036836/professor-arne-tiselius-i-arbete-uppsala-1955">digitaltmuseum.se</a>)</small>
-          </div>
-        </article>
       </div>
-      <div class="column is-2">
+      <div class="column is-2 has-text-centered is-size-7">
         <img src="./images/ArneTiselius.jpg" alt="Arne Tiselius">
       </div>
     </div>
     <div class="columns">
       <div class="column">
         <p>
-        Today, gel electrophoresis is used in biology labs worldwide to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet gentle on the molecules being analyzed. Unfortunately, it has at least one big drawback: it can be difficult to master.
+        Today, gel electrophoresis is used in biology labs worldwide to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet gentle on the molecules being analyzed. However, the technique can be very difficult to master.
         </p>
         <br>
         <p>
@@ -151,11 +149,11 @@
     <div class="columns">
       <div class="column">
         <p>
-        Even when gels are prepared and run successfully, interpreting the data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. These challenges can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
+        Even when gels are prepared and run successfully, interpreting the data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. Challenges with using gels can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
         </p>
         <br>
         <p>
-        We believe interactive simulation and visualization tools can help. We have created <span class="has-text-weight-semibold">Gelbox</span>, a dynamic “scientific sandbox” for visualizing the relationships between gel bands, sample molecules, and the gel itself. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways.
+        We believe interactive simulation and visualization tools can help. We created <span class="has-text-weight-semibold">Gelbox</span>, a dynamic “scientific sandbox” for visualizing the relationships between gel bands, sample molecules, and the gel itself. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways.
         </p>
         <br>
         <p>
@@ -428,31 +426,37 @@
     <!-- End of Commands -->
     <h1 id="discussion" class="title is-4">Discussion <a href="#discussion">•</a></h1>
     <p>
-      Running real gels in the laboratory is constrained by a slow feedback loop. The time between making a mistake in preparing a gel and observing its effects can be several hours. Computer simulation can reduce the time between modifying a gel parameter and observing the effects to fractions of a second. The rapid feedback makes cause-and-effect relationships visible and explicit. We expect that Gelbox may be useful to students with limited prior experience with gel electrophoresis for quickly gaining some basic intuition for interpreting gel data and troubleshooting problematic experimental conditions. Gelbox may also be useful for mentors as a pedagogical aid.
+      We built Gelbox as a learning tool to complement the <em>ad hoc</em> learning methods routinely used in laboratory settings. While working with real gels provides valuable hands-on experience, the learning process is constrained by a slow feedback loop. Several hours can pass between making a mistake in preparing a gel and observing its effects.
+      Fortunately, computer simulation can reduce the time between modifying a gel parameter and observing the effects to fractions of a second, making cause-and-effect relationships visible and explicit.
     </p>
     <br>
     <p>
-      Several gel simulators have been created as part of larger software packages used to assist with gene editing and DNA cloning<sup><a id="othersims" href="#references">8–11</a></sup>. These tools typically provide one static graphical representation of predicted DNA fragments under perfect experimental conditions. By contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentation, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture ways in which gels can be imperfect or fail.
+      While other gel simulators do exist, they only provide one static graphical representation of predicted DNA fragments under perfect experimental conditions<sup><a id="othersims" href="#references">8–11</a></sup>. These tools are typically included with software for gene editing or DNA cloning. In contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentation, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture ways in which gels can be imperfect or fail.
     </p>
     <br>
     <p>
-      Gelbox has several limitations. First, the simulation model is limited and incomplete. We spent most of our effort on developing the various representations, and only made a limited attempt to calibrate the simulation parameters. Thus, the predicted band mobility and behavior may not match real-world results. Future work could extend the model to include more paramters or conditions.
-    </p>
-    <br>
-    <p>If you wish to understand the simulation model, a good starting point is <a href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from <a href="https://github.com/douglaslab/gelbox/blob/master/assets/tuning/sim.json">sim.json</a>. To convert DNA length (bp) to y-axis band mobility in the gel, we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>. and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>.
+      To build the simulation model, we started with the goal of writing code that would convert DNA length (bp) to y-axis band mobility in the gel. When starting out we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but we ultimately developed our own model directly from gel image data for a 1kb ladder. If you wish to understand the simulation model in the Gelbox source code, a good starting point is <a target="_new" href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from json files in the <a href="https://github.com/douglaslab/gelbox/tree/master/assets/tuning">tuning</a> folder.
     </p>
     <br>
     <p>
-    We hope Gelbox offers a novel approach to learning gel electrophoresis that complements the <em>ad hoc</em> trial-and-error methods routinely used in laboratory settings. Moreover, we hope our work inspires others to build interactive simulations to teach complex systems and tools. We welcome feedback and bug reports.
+      Gelbox has several limitations. First, the simulation model is relatively narrow in scope compared to a real gel. We spent most of our effort on creating the various representations and did not have time to account for many parameters and molecule types. We focused on agarose gels and DNA fragments ranging in size from 100 to 14000 base pairs. Gelbox does not currently support RNA or protein molecules.
+
+      Second, the simulation could benefit from further calibration. We did not systematically validate all parameters with experimental data, thus the predicted band mobility and behavior may not match real-world results.
+
+      Third, our models do not have any physical basis, that is, we do not account for kinetic or thermodynamic properties of the DNA molecules. However, Gelbox might be used as a visualization tool for other physically based simulations if adapted to output our text-based file format.
+    </p>
+    <br>
+    <p>
+      In summary, we have created a dynamic, interactive gel electrophoresis simulator. Gelbox may help learners establish some basic intuition for interpreting gel data and for troubleshooting problematic experimental conditions. It has several limitations, many of which could be addressed with further development and experimental validation. We hope our work inspires others to build additional interactive simulations for other systems and tools.
     </p>
     <br><br>
     <!-- End of Discussion -->
-    <!-- End of Under the hood -->
     <h1 id="acks" class="title is-4">Acknowledgements <a href="#acks">•</a></h1>
     <p>
     We thank <span class="has-text-weight-semibold">J.Brown</span> for assistance with the app icon and Quick Start video, and <span class="has-text-weight-semibold">P.Nafisi</span> for running several gels used to calibrate the simulation model. We thank <span class="has-text-weight-semibold">P. Rothemund</span> and <span class="has-text-weight-semibold">N.Case</span> for helpful feedback and suggestions.
     This work was supported by <a target="_new" href="http://www.pewtrusts.org/en/projects/pew-stewart-scholars-for-cancer-research">Pew-Stewart Scholars Program for Cancer Research</a>, the National Science Foundation <a target="_new" href="https://ccc.ucsf.edu/">Center for Cellular Construction</a> (<a target="_new" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1548297">DBI 1548297</a>), and the UCSF <a target="_new" href="http://pbbr.ucsf.edu/">Program for Breakthrough Biomedical Research</a>, which is partially funded by the Sandler Foundation.
     </p>
+    <!-- End of Acknowledgements -->
     <br><br>
     <div class="level">
       <div class="level-left"><h1 id="references" class="title is-4">References <a href="#references">•</a></h1></div>
