@@ -21,7 +21,8 @@
   <div class="container">
     <div class="columns">
       <div class="column is-10 is-offset-1 has-text-centered">
-        <img src="./images/video-placeholder-1920x1080.png" alt="QuickStart video">
+        <iframe src="https://player.vimeo.com/video/287493132" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<!--         <img src="./images/video-placeholder-1920x1080.png" alt="QuickStart video"> -->
       </div>
     </div>
   </div>
@@ -62,7 +63,7 @@
         <strong>Abstract</strong>
       </div>
       <div class="column">
-        Gel electrophoresis enables separation and visualization of biomolecules such as DNA, RNA, or proteins. Like many powerful tools, effective use of gels can be difficult to learn. <span class="has-text-weight-semibold">Gelbox</span> is a simulation tool to help build intuition for the relationships between experimental input parameters and resulting data output from gel electrophoresis. Our simulation model handles a wide range of settings, including many "suboptimal" values that may be useful for troubleshooting common mistakes by novices.
+        Gel electrophoresis enables separation and visualization of biomolecules such as DNA, RNA, or proteins. As with many powerful tools, mastering the use of gels and making the information gained from them productive, can be difficult. <span class="has-text-weight-semibold">Gelbox</span> is a simulation tool that helps the user understand how changing experimental input parameters can affect the data output from gel electrophoresis. Our simulation model handles a wide range of settings, including many "suboptimal" values that may be useful for troubleshooting common mistakes made by novices.
       </div>
 
     </div>
@@ -72,7 +73,7 @@
       </div>
       <div class="column">
         <!-- <a class="button is-warning">macOS</a> <a class="button is-warning">Win</a> <a class="button is-warning">GitHub</a> -->
-        <a class="button is-primary" href="./files/gelbox1.0.dmg" target=”_blank" onclick="ga('send', 'event', 'macOS', 'download');"><i class="fas fa-fw fa-arrow-to-bottom"></i> macOS</a>
+        <a class="button is-primary" href="./files/Gelbox1.0.dmg" target=”_blank" onclick="ga('send', 'event', 'macOS', 'download');"><i class="fas fa-fw fa-arrow-to-bottom"></i> macOS</a>
         <a class="button" href="https://github.com/douglaslab/gelbox/"><i class="fab fa-fw fa-github"></i>&nbsp;Source</a>
         <a class="button" href="./files/Gelbox.pdf" target=”_blank" onclick="ga('send', 'event', 'macOS', 'download');"><i class="far fa-file-pdf"></i>&nbsp;PDF</a>
         <a class="button" href="./presskit/"><i class="far fa-fw fa-bullhorn"></i>&nbsp;Press kit</a>
@@ -85,7 +86,7 @@
     <h1 id="introduction" class="title is-4">Introduction <a href="#introduction">•</a></h1>
     <div class="columns">
       <div class="column">
-        <p>In 1948, when Arne Tiselius was awarded Nobel Prize in Chemistry for his pioneering work on electrophoresis, he summarized his motivations for the research as follows:
+        <p>IIn 1948, when Arne Tiselius won the Nobel Prize in Chemistry for his pioneering work on electrophoresis, he summarized his motivations for the research as follows<sup><a id="Tiselius1948" href="#references">1</a></sup>:
         </p>
       </div>
     </div>
@@ -97,7 +98,7 @@
     <div class="columns">
       <div class="column">
         <p>
-        Today, gel electrophoresis is used in biology labs worldwide to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet gentle on the molecules being analyzed. However, the technique can be very difficult to master for a variety of reasons.
+        Today, researchers use gel electrophoresis in labs worldwide to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet preserves the structures of the molecules being analyzed. However, the technique can be very difficult to master for a variety of reasons.
         </p>
         <br>
         <p>
@@ -130,11 +131,11 @@
     <div class="columns">
       <div class="column">
         <p>
-        Even when gels are run successfully, interpreting the data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. Challenges with preparing and using gels can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
+        Even when gels are run successfully, interpreting data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. Challenges in preparing and using gels can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
         </p>
         <br>
         <p>
-        We believe interactive simulation and visualization tools can help. We created <span class="has-text-weight-semibold">Gelbox</span>, a dynamic “scientific sandbox” for visualizing the relationships between gel bands, sample molecules, and the gel itself. We sought to capture the notion that gels are easy to mess up, but they do so in predictable ways.
+        We believe interactive simulation and visualization tools can help. We created Gelbox, a dynamic “scientific sandbox” that can aid in visualizing various ways that gel bands, sample molecules, and the gel itself, interact. We wanted to explore the potential pitfalls of using gels by illustrating that, although it’s easy to make mistakes when using this method, these mistakes are also predictable and can mostly be avoided with some training and forethought.
         </p>
         <br>
         <p>
@@ -426,28 +427,27 @@
     <!-- End of Commands -->
     <h1 id="discussion" class="title is-4">Discussion <a href="#discussion">•</a></h1>
     <p>
-      We built Gelbox as a learning tool to complement the <em>ad hoc</em> learning methods routinely used in laboratory settings. While working with real gels provides valuable hands-on experience, the learning process is constrained by a slow feedback loop. Several hours can pass between making a mistake in preparing a gel and observing its effects.
-      Fortunately, computer simulation can reduce the time to fractions of a second between modifying a gel parameter and observing the effects, making cause-and-effect relationships visible and explicit.
+      We built Gelbox to be an interactive tool that could complement the <em>ad hoc</em> learning methods routinely used in laboratory settings. While working with real gels provides valuable hands-on experience, the learning process is constrained by a slow feedback loop. Several hours can pass between making a mistake in preparing a gel and observing the effects of that mistake. Fortunately, computer simulation can reduce the time to fractions of a second between modifying a gel parameter and observing the effects, making cause-and-effect relationships more visible and explicit.
     </p>
     <br>
     <p>
-      While other gel simulators do exist, they only provide one static graphical representation of predicted DNA fragments under perfect experimental conditions<sup><a id="othersims" href="#references">8–11</a></sup>. These tools are typically included with software for gene editing or DNA cloning. In contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentration, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture ways in which gels can be imperfect or fail.
+      While other gel simulators do exist, they provide only a single static graphical representation of predicted DNA fragment mobility under perfect experimental conditions<sup><a id="othersims" href="#references">8–11</a></sup>. These tools are typically included with software for gene editing or DNA cloning. In contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentration, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture and explain how gels can produce flawed information, particularly due to user error, or fail completely.
     </p>
     <br>
     <p>
-      To build the simulation model, we started with the goal of writing code that would convert DNA length (bp) to y-axis band mobility in the gel. When starting out we found it useful to reference expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but we ultimately developed our own model directly from gel image data for a 1kb ladder. If you wish to understand the simulation model in the Gelbox source code, a good starting point is <a target="_new" href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from json files in the <a href="https://github.com/douglaslab/gelbox/tree/master/assets/tuning">tuning</a> folder.
+      To build the simulation model, we first wanted to write code that would accurately convert the length of a DNA fragment to band mobility in the gel. We referenced expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but ultimately developed our own model directly from gel-image data for a 1kb ladder. If you wish to understand the simulation model in the Gelbox source code, a good starting point is <a target="_new" href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from json files in the <a href="https://github.com/douglaslab/gelbox/tree/master/assets/tuning">tuning</a> folder.
     </p>
     <br>
     <p>
-      Gelbox has several limitations. First, the simulation model is relatively narrow in scope compared to a real gel. We spent most of our effort on creating the various representations and did not have time to account for many parameters and molecule types. We focused on agarose gels and DNA fragments ranging in size from 100 to 14000 base pairs. Gelbox does not currently support RNA or protein molecules.
+      Gelbox has several limitations. First, the simulation model is relatively narrow in scope compared to a real gel. We spent most of our effort on creating the various representations and thus didn't capture the great variation in parameters and molecule types. We focused on agarose gels and DNA fragments ranging in size from 100 to 14000 base pairs. Gelbox does not currently support RNA or protein molecules.
 
       Second, the simulation could benefit from further calibration. We did not systematically validate all parameters with experimental data, thus the predicted band mobility and behavior may not match real-world results.
 
-      Third, our models do not have any physical basis, that is, we do not account for kinetic or thermodynamic properties of the DNA molecules. However, Gelbox might be used as a visualization tool for other physically based simulations if they were adapted to output our text-based file format.
+      Third, our models do not have any physical basis: that is, we do not account for kinetic or thermodynamic properties of the DNA molecules. However, Gelbox might be used as a visualization tool for other physically based simulations if they were adapted to output our text-based file format.
     </p>
     <br>
     <p>
-      In summary, we have created a dynamic, interactive gel electrophoresis simulator with multiple linked representations of the system. Gelbox may help learners establish some basic intuition for interpreting gel data and for troubleshooting problematic experimental conditions. It has several limitations, many of which could be addressed with further development, including more experimental validation and integration with other simulation tools. We hope our work inspires others to build interactive simulations for additional aspects of scientific research.
+      In summary, we have created a dynamic, interactive gel electrophoresis simulator that relies on multiple linked representations of the system to help young or new researchers achieve more accurate and useful results when using gel electrophoresis. Gelbox may help learners establish some basic skills to help them interpret gel data and to troubleshoot problematic experimental conditions. Many of the limitations of Gelbox could be addressed with further development, including more experimental validation and integration with other simulation tools. We hope our work inspires others to build interactive simulations for additional aspects of scientific research so that all of these efforts can be synergistic, and so what we have created will become more useful and accurate with further iterations.
     </p>
     <br><br>
     <!-- End of Discussion -->
