@@ -95,7 +95,7 @@
     <div class="columns">
       <div class="column">
         <p>
-        Today, in labs worldwide, researchers use gel electrophoresis to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet preserves the structures of the molecules being analyzed. However, for a variety of reasons, the technique can be very difficult to master.
+        Today, in labs worldwide, researchers use gel electrophoresis to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet preserves the structures of the molecules being analyzed. However, for a variety of reasons, the technique can be difficult to master.
         </p>
         <br>
         <p>
@@ -128,7 +128,7 @@
     <div class="columns">
       <div class="column">
         <p>
-        Even when gels are run successfully, interpreting data can be tricky because the relationships between "band" patterns and the molecules in a sample are very abstract and often ambiguous. Challenges in preparing and using gels can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
+        Even when gels are run successfully, interpreting data can be tricky because the relationships between "band" patterns and the molecules in a sample are abstract and often ambiguous. Challenges in preparing and using gels can frustrate budding scientists, interfere with scientific reproducibility, and impede overall research progress.
         </p>
         <br>
         <p>
@@ -136,7 +136,7 @@
         </p>
         <br>
         <p>
-        This project builds on concepts from <span class="has-text-weight-semibold">Earth Primer</span>, an interactive geology science book by Gingold<sup><a id="earthprimer" href="#references">2</a></sup>. We have been greatly influenced by Bret Victor's work, especially <span class="is-italic">Up and Down the Ladder of Abstraction</span><sup><a id="inspire1" href="#references">3</a></sup>. We also drew inspiration from <span class="is-italic">Parable of the Polygons</span> by Vi Hart and Nicky Case<sup><a id="inspire2" href="#references">4</a></sup>, and many other works<sup><a id="inspire3" href="#references">5–7</a></sup>.
+        This project builds on concepts from <em>Earth: A Primer</em>, an interactive geology science book by Gingold<sup><a id="earthprimer" href="#references">2</a></sup>. We have been greatly influenced by Bret Victor's work, especially <em>Up and Down the Ladder of Abstraction</em><sup><a id="inspire1" href="#references">3</a></sup>. We also drew inspiration from <em>Parable of the Polygons</em> by Vi Hart and Nicky Case<sup><a id="inspire2" href="#references">4</a></sup>, and many other works<sup><a id="inspire3" href="#references">5–7</a></sup>.
 
         </p>
         <br>
@@ -428,29 +428,32 @@
     </p>
     <br>
     <p>
-      While other gel simulators do exist, they provide only a single static graphical representation of predicted DNA fragment mobility under perfect experimental conditions<sup><a id="othersims" href="#references">8–11</a></sup>. These tools are typically included with software for gene editing or DNA cloning. In contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentration, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture and explain how gels can produce flawed information, particularly due to user error, or fail completely.
+      While other gel simulators do exist, they provide only a single static graphical representation of predicted DNA fragment mobility under perfect experimental conditions<sup><a id="othersims" href="#references">8–11</a></sup>. These tools are typically included with computer-aided design software for gene editing or DNA cloning. In contrast, Gelbox provides multiple dynamic representations of a gel under a wide range of conditions. Molecules can vary in size, concentration, shape, or degree of aggregation and degradation. To our knowledge, Gelbox is the only gel simulation tool that attempts to capture and explain how gels can produce flawed information, particularly due to user error, or fail completely.
     </p>
     <br>
     <p>
-      To build the simulation model, we first wanted to write code that would accurately convert the length of a DNA fragment to band mobility in the gel. We explored models from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but ultimately developed our own model directly from gel-image data for a 1 kb ladder.
+      To build the simulation model, we aimed to write code that would accurately convert the length of a DNA fragment to band mobility in the gel. We explored models from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but ultimately developed our own model directly from gel-image data for a 1 kb ladder.
     </p>
     <br>
     <p>
-      Gelbox has several limitations. First, the simulation model is relatively narrow in scope compared to a real gel. We spent most of our effort on creating the various representations and thus didn't capture the great variation in parameters and molecule types. We focused on agarose gels and DNA fragments ranging in size from 100 to 14000 base pairs. Gelbox does not currently support RNA or protein molecules.
+      Gelbox has several limitations. First, Gelbox only models agarose gels and DNA fragments ranging in size from 100 to 14000 base pairs. It does not yet support RNA or protein gels.
 
-      Second, the simulation could benefit from further calibration. We did not systematically validate all parameters with experimental data, thus the predicted band mobility and behavior may not match real-world results.
+      Second, the simulation model is narrow in scope compared to real agarose gels. We spent most of our effort on creating the various representations and thus didn't capture the great variation in possible parameters.
 
-      Third, our models do not have any physical basis: that is, we do not account for kinetic or thermodynamic properties of the DNA molecules. However, Gelbox might be used as a visualization tool for other physically based simulations if they were adapted to output our text-based file format.
+      Third, the simulation could benefit from further calibration. We did not systematically validate all parameters with experimental data, thus the predicted band mobility and behavior may not match real-world results.
+
+      Fourth, our models do not have any physical basis: that is, we do not account for kinetic or thermodynamic properties of the DNA molecules. However, Gelbox might be used as a visualization tool for other physically based simulations if they were adapted to output our text-based file format.
     </p>
     <br>
     <p>
-      In summary, we have created a dynamic, interactive gel electrophoresis simulator that relies on multiple linked representations of the system to help young or new researchers achieve more accurate and useful results when using gel electrophoresis. Gelbox may help learners establish some basic skills to help them interpret gel data and to troubleshoot problematic experimental conditions. Many of the limitations of Gelbox could be addressed with further development, including more experimental validation and integration with other simulation tools. We hope our work inspires others to build interactive simulations for additional aspects of scientific research so that all of these efforts can be synergistic, and so what we have created will become more useful and accurate with further iterations.
+      In summary, we have created a dynamic, interactive gel electrophoresis simulator that relies on multiple linked representations of the system to help young or new researchers achieve more accurate and useful results when using gel electrophoresis. Gelbox may help learners establish some basic skills to help them interpret gel data and to troubleshoot problematic experimental conditions. Many of the limitations of Gelbox could be addressed with further development, including more experimental validation and integration with other simulation tools. We hope our work inspires others to build interactive simulations for additional aspects of scientific research so that all of these efforts can be synergistic, and so Gelbox becomes more useful and accurate with further iterations.
     </p>
     <br><br>
     <!-- End of Discussion -->
     <h1 id="acks" class="title is-4">Acknowledgements <a href="#acks">•</a></h1>
     <p>
-    We thank <span class="has-text-weight-semibold">J Brown</span> for assistance with the app icon and introductory video, and <span class="has-text-weight-semibold">P Nafisi</span> for running several gels used to calibrate the simulation model. We thank <span class="has-text-weight-semibold">P Rothemund</span> and <span class="has-text-weight-semibold">N Case</span> for helpful feedback and suggestions.
+    We thank <span class="has-text-weight-semibold">J Brown</span> for assistance with the app icon and introductory video, and <span class="has-text-weight-semibold">P Nafisi</span> for running several gels that we used to calibrate the simulation model. We thank <span class="has-text-weight-semibold">P Rothemund</span> and <span class="has-text-weight-semibold">N Case</span> for helpful testing and feedback.
+
     This work was supported by <a target="_new" href="http://www.pewtrusts.org/en/projects/pew-stewart-scholars-for-cancer-research">Pew-Stewart Scholars Program for Cancer Research</a>, the National Science Foundation <a target="_new" href="https://ccc.ucsf.edu/">Center for Cellular Construction</a> (<a target="_new" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1317694">CCF 1317694</a>, <a target="_new" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1548297">DBI 1548297</a>), and the UCSF <a target="_new" href="http://pbbr.ucsf.edu/">Program for Breakthrough Biomedical Research</a>, which is partially funded by the Sandler Foundation.
     </p>
     <!-- End of Acknowledgements -->
