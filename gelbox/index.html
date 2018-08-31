@@ -72,10 +72,9 @@
         <strong>Downloads</strong>
       </div>
       <div class="column">
-        <!-- <a class="button is-warning">macOS</a> <a class="button is-warning">Win</a> <a class="button is-warning">GitHub</a> -->
-        <a class="button is-primary" href="./files/Gelbox1.0.dmg" onclick="ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'macOS', eventValue: 1});"><i class="fas fa-fw fa-arrow-to-bottom"></i> macOS</a>
+        <a class="button is-primary" href="http://bit.ly/gelbox10"><i class="fas fa-fw fa-arrow-to-bottom"></i> macOS</a>
         <a class="button" href="https://github.com/douglaslab/gelbox/"><i class="fab fa-fw fa-github"></i>&nbsp;Source</a>
-        <a class="button" href="./files/Gelbox.pdf" onclick="ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'PDF', eventValue: 1});"><i class="far fa-file-pdf"></i>&nbsp;PDF</a>
+        <a class="button" href="./files/Gelbox.pdf"><i class="far fa-file-pdf"></i>&nbsp;PDF</a>
         <a class="button" href="./presskit/"><i class="far fa-fw fa-bullhorn"></i>&nbsp;Press kit</a>
       </div>
     </div>
@@ -102,7 +101,7 @@
         </p>
         <br>
         <p>
-        First, gels must be prepared according to detailed protocols. Small variations in the amount of an ingredient or the timing of a step can dramatically affect gel behavior. To illustrate this concept, we ran identical 1kb ladder samples on three agarose gels that were prepared with different buffers. We observed that the degree of band mobility, smearing, and distortion varied greatly for each gel.
+        First, gels must be prepared according to detailed protocols. Small variations in the amount of an ingredient or the timing of a step can dramatically affect gel behavior. To illustrate this concept, we ran identical 1 kb ladder samples on three agarose gels that were prepared with different buffers. We observed that the degree of band mobility, smearing, and distortion varied greatly for each gel.
         </p>
       </div>
     </div>
@@ -435,7 +434,7 @@
     </p>
     <br>
     <p>
-      To build the simulation model, we first wanted to write code that would accurately convert the length of a DNA fragment to band mobility in the gel. We referenced expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but ultimately developed our own model directly from gel-image data for a 1kb ladder. If you wish to understand the simulation model in the Gelbox source code, a good starting point is <a target="_new" href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from json files in the <a href="https://github.com/douglaslab/gelbox/tree/master/assets/tuning">tuning</a> folder.
+      To build the simulation model, we first wanted to write code that would accurately convert the length of a DNA fragment to band mobility in the gel. We referenced expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but ultimately developed our own model directly from gel-image data for a 1 kb ladder. If you wish to understand the simulation model in the Gelbox source code, a good starting point is <a target="_new" href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from json files in the <a href="https://github.com/douglaslab/gelbox/tree/master/assets/tuning">tuning</a> folder.
     </p>
     <br>
     <p>
