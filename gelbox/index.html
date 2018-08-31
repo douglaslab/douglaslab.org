@@ -6,8 +6,6 @@
   <title>DouglasLab | Gelbox</title>
   <link rel="stylesheet" href="../css/bulma.css">
   <link rel="stylesheet" href="../css/all.css" >
-  <!-- <link rel="stylesheet" href="../css/refs.css"> -->
-  <!-- <script src="/js/bodymovin.min.js"></script> -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124630264-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,7 +20,6 @@
     <div class="columns">
       <div class="column is-12 has-text-centered">
         <iframe src="https://player.vimeo.com/video/287493132" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<!--         <img src="./images/video-placeholder-1920x1080.png" alt="QuickStart video"> -->
       </div>
     </div>
   </div>
@@ -97,7 +94,7 @@
     <div class="columns">
       <div class="column">
         <p>
-        Today, researchers use gel electrophoresis in labs worldwide to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet preserves the structures of the molecules being analyzed. However, the technique can be very difficult to master for a variety of reasons.
+        Today, in labs worldwide, researchers use gel electrophoresis to isolate, define, and characterize biomolecules. Gel electrophoresis is a powerful and versatile technique that is remarkably precise, yet preserves the structures of the molecules being analyzed. However, for a variety of reasons, the technique can be very difficult to master.
         </p>
         <br>
         <p>
@@ -434,7 +431,7 @@
     </p>
     <br>
     <p>
-      To build the simulation model, we first wanted to write code that would accurately convert the length of a DNA fragment to band mobility in the gel. We referenced expressions from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but ultimately developed our own model directly from gel-image data for a 1 kb ladder. If you wish to understand the simulation model in the Gelbox source code, a good starting point is <a target="_new" href="https://github.com/douglaslab/gelbox/blob/master/src/GelSim.cpp">GelSim.cpp</a>, which converts the parameters of a sample species and its environment to band geometry. Many of the simulation parameters are hot-loaded from json files in the <a href="https://github.com/douglaslab/gelbox/tree/master/assets/tuning">tuning</a> folder.
+      To build the simulation model, we first wanted to write code that would accurately convert the length of a DNA fragment to band mobility in the gel. We explored models from Van Winkle, Beheshti, and Rill<sup><a id="VanWinkle2002" href="#references">12</a></sup>, and the dissertation of A. Beheshti<sup><a id="Beheshti2002" href="#references">13</a></sup>, but ultimately developed our own model directly from gel-image data for a 1 kb ladder.
     </p>
     <br>
     <p>
