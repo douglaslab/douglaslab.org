@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DouglasLab Projects</title>
+  <style>.skip-link:focus{position:fixed!important;left:10px!important;top:10px!important;width:auto!important;height:auto!important;overflow:visible!important;background:#2fa9fa;color:#fff;padding:.5rem 1rem;font-size:1rem;z-index:10000;border-radius:4px;text-decoration:none}</style>
   <link rel="stylesheet" href="./css/bulma.css">
   <link rel="stylesheet" href="../css/all.css" >
 <!--   <link rel="stylesheet" href="./css/refs.css"> -->
@@ -17,6 +18,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;">Skip to main content</a>
 <section class="section">
   <div class="container">
     <div class="content has-text-centered">
@@ -24,6 +26,7 @@
     </div>
   </div>
 </section>
+<main id="main-content">
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -31,7 +34,7 @@
         <div class="columns box">
           <div class="column is-8">
             <div class="content">
-            <h2>Main website <a target="_new" href="http://bionano.ucsf.edu/">→</a></h2>
+            <h2><a target="_blank" rel="noopener" href="http://bionano.ucsf.edu/">Main website</a></h2>
             <p>
               Visit the UCSF DouglasLab website to find lab members, publications, contact info, and pixel art.
             </p>
@@ -40,7 +43,7 @@
           <div class="column is-4">
             <figure>
               <p class="image is-16x9">
-                <a target="_new" href="http://bionano.ucsf.edu/"><img src="./images/bionano-thumb.png"></a>
+                <a target="_blank" rel="noopener" href="http://bionano.ucsf.edu/"><img src="./images/bionano-thumb.png" alt="UCSF DouglasLab website thumbnail"></a>
               </p>
             </figure>
           </div>
@@ -53,7 +56,7 @@
         <div class="columns box">
           <div class="column is-7">
             <div class="content">
-            <h2>Gelbox <a href="./gelbox/">→</a></h2>
+            <h2><a href="./gelbox/">Gelbox</a></h2>
             <p>
               Gelbox is a scientific sandbox that simulates how gel bands relate to molecules.
             </p>
@@ -62,7 +65,7 @@
           <div class="column is-4 is-offset-1">
             <figure>
               <p class="image is-16x9">
-                <a href="/gelbox"><img src="./images/gelbox-thumb.png"></a>
+                <a href="/gelbox"><img src="./images/gelbox-thumb.png" alt="Gelbox gel electrophoresis simulator thumbnail"></a>
               </p>
             </figure>
           </div>
@@ -75,7 +78,7 @@
         <div class="columns box">
           <div class="column is-7">
             <div class="content">
-            <h2>Tutorials <a href="./tutorials/">→</a></h2>
+            <h2><a href="./tutorials/">Tutorials</a></h2>
             <p>
               Step-by-step walkthroughs of how we do stuff in the lab.
             </p>
@@ -84,7 +87,7 @@
           <div class="column is-4 is-offset-1">
             <figure>
               <p class="image is-16x9">
-                <a href="/gelbox"><img src="./images/tutorials-thumb.jpg"></a>
+                <a href="./tutorials/"><img src="./images/tutorials-thumb.jpg" alt="Lab tutorials thumbnail"></a>
               </p>
             </figure>
           </div>
@@ -93,8 +96,7 @@
     </div>  </div>
 </section>
 
-<section class="section is-large">
-</section>
+</main>
 
 <footer class="footer" style="background-color: #222222">
 <br><br>
@@ -110,18 +112,18 @@
       <div class="column">
         <div class="columns is-centered">
           <div class="column is-narrow">
-            <a target="blank" style="color:#2fa9fa" href="https://twitter.com/smd4">
-              <span class="icon"><i class="fab fa-twitter"></i></span>
+            <a target="_blank" rel="noopener" style="color:#2fa9fa" href="https://twitter.com/smd4" aria-label="Twitter">
+              <span class="icon"><i class="fab fa-twitter" aria-hidden="true"></i></span>
             </a>
           </div>
           <div class="column is-narrow">
-            <a target="blank" style="color:#2fa9fa" href="https://github.com/douglaslab">
-              <span class="icon"><i class="fab fa-github"></i></span>
+            <a target="_blank" rel="noopener" style="color:#2fa9fa" href="https://github.com/douglaslab" aria-label="GitHub">
+              <span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span>
             </a>
           </div>
           <div class="column is-narrow">
-            <a target="blank" style="color:#2fa9fa" href="https://tinyletter.com/douglaslab">
-              <span class="icon"><i class="fas fa-envelope"></i></span>
+            <a target="_blank" rel="noopener" style="color:#2fa9fa" href="https://tinyletter.com/douglaslab" aria-label="Newsletter signup">
+              <span class="icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
             </a>
         </div>
       </div>
@@ -130,7 +132,7 @@
    <div class="columns">
     <div class="column has-text-centered">
      <p>
-      <small style="color:#666666">Made with <a style="color:#999999" href="https://bulma.io/">Bulma</a></small>
+      <small style="color:#aaaaaa">Made with <a style="color:#cccccc" href="https://bulma.io/">Bulma</a></small>
      </p>
    </div>
  </div>
