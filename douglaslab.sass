@@ -1,7 +1,7 @@
 @import "node_modules/bulma/sass/utilities/initial-variables"
 
 // Override max container to 960px + 3rem
-$primary: #2fa9fa
+$primary: #0072CE
 $widescreen: $desktop
 $fullhd: $desktop
 
@@ -10,6 +10,13 @@ $footer-background-color: #222222
 
 @import "node_modules/bulma/bulma"
 
+// Ensure links are identifiable by more than color alone (WCAG 1.4.1)
+.content a:not(.button):not(.tag)
+  text-decoration: underline
+
+.footer a
+  text-decoration: underline
+
 .skip-link:focus
   position: fixed !important
   left: 10px !important
@@ -17,7 +24,7 @@ $footer-background-color: #222222
   width: auto !important
   height: auto !important
   overflow: visible !important
-  background: #2fa9fa
+  background: #0072CE
   color: #fff
   padding: 0.5rem 1rem
   font-size: 1rem
