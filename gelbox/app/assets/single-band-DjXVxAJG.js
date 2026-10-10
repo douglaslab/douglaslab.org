@@ -1,0 +1,2 @@
+const e="gel-state-v0",s={width:320,height:240},a=1,t=[{rect:{x1:60,y1:90,x2:260,y2:102},smearAbove:6,smearBelow:18,smearBrightnessAbove:[.55,0],smearBrightnessBelow:[.4,0],flameHeight:14,smileHeight:7,smileExp:1.5,blur:3,brightness:.85,color:[1,.92,.78],randSeed:7,wellDamage:.4,wellDamageRandSeed:21}],l={schema:e,gelSize:s,pixelsPerUnit:a,bands:t};export{t as bands,l as default,s as gelSize,a as pixelsPerUnit,e as schema};
+//# sourceMappingURL=single-band-DjXVxAJG.js.map
