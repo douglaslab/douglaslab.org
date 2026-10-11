@@ -1,0 +1,2 @@
+import{w as a,b as o}from"./index-BvCHY1TN.js";const r=new Float32Array([0,0,0,0,1,0,1,0,0,1,0,1,1,1,1,1]);function f(e){const t=o(e,{label:"fullscreen-quad",size:r.byteLength,usage:GPUBufferUsage.VERTEX|GPUBufferUsage.COPY_DST});return e.queue.writeBuffer(t,0,r),{buffer:t,vertexCount:4,layout:{arrayStride:4*4,stepMode:"vertex",attributes:[{shaderLocation:0,offset:0,format:"float32x2"},{shaderLocation:1,offset:4*2,format:"float32x2"}]},destroy(){t.destroy()}}}function s(...e){return a(e[0],()=>f(...e))}export{s as createQuad};
+//# sourceMappingURL=quad-BOJg_JpK.js.map
