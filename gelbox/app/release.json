@@ -8,7 +8,7 @@
     "npx playwright test -c playwright.production.config.ts",
     "npx playwright test -c playwright.compatibility.config.ts file-workflow.spec.ts"
   ],
-  "verification_note": "Isolated build; all626 tracked ts files match source_commit. 3054 units, 82 production and10 focused compatibility cases passed. Shipping Safari post-fix Save Sample replay remains pending; Command-O intercepted by browser, menu Open verified. Main dist reserved for running memory test.",
+  "verification_note": "Isolated build; all 626 tracked ts files match source_commit. 3054 units, 82 production and 10 focused compatibility cases passed. Shipping Safari post-fix Save Sample matches the complete original-native sample exactly. Safari Command-O is intercepted by the browser; in-app menu Open is verified, with acceptance of that fallback pending. Later unqualified numerical candidate changes are not included in this staged release.",
   "sha256": {
     "assets/50-band-2vpD0nLZ.js": "e50eb48a64a386fefa8fb797586edb7fe6b1e7f2782658efb24e4a8c91972072",
     "assets/50-band-2vpD0nLZ.js.map": "ed95ac99da710a980b12c5aa9fe6fdadb77bf4503e216225aa36c29d307e161a",
