@@ -1,12 +1,11 @@
 {
   "version": "1.0.1",
-  "build": "20261010",
+  "build": "20261011",
   "architecture": "arm64",
   "minimum_macos": "11.0",
-  "tested_macos": "27.0.1",
   "signature": "ad-hoc",
   "notarized": false,
-  "native_commit": "5773502e8cffafa37247e994097f740d947ec6bc",
+  "native_commit": "f88084187436d1e604daa2bd7905b1eb1b4df026",
   "cinder_commit": "f90f332d1a4d453282c76435f3401271f25922f9",
   "configure": [
     "cmake",
@@ -15,17 +14,18 @@
     "-B",
     "build-distribution",
     "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_OSX_ARCHITECTURES=arm64",
     "-DCINDER_COPY_ASSETS=ON",
     "-DGELBOX_VERSION=1.0.1",
-    "-DGELBOX_BUILD_NUMBER=20261010"
+    "-DGELBOX_BUILD_NUMBER=20261011"
   ],
   "sha256": {
-    "Gelbox1.0.1-arm64.dmg": "5caab3a3e44ceb2272c9e69b77932ef60dfc7a32a3a6d8f7952a13ba5d940167",
-    "Gelbox1.0.1-source.tar.gz": "45dbea67ca18f9cb53d9eaffccb64c56145f1d3ddcfe6940670c3a5d68d916e0"
+    "Gelbox1.0.1-arm64.dmg": "6806be071f60ee1115fa36c77ec83621c1df0b802156b2560c089a26e96af8c8",
+    "Gelbox1.0.1-source.tar.gz": "8d2095c237b95a42b1c06eeac99b0caa9dcc09982da424b8c7e493f784d4615a"
   },
   "bundle_sha256": {
-    "Contents/Info.plist": "9128ed59835a2ae5f4efc09bfb269cbd77e5c0d34e93c10b3d9002516b13f810",
-    "Contents/MacOS/Gelbox": "cc29feea3e07319c0df60e9c2f2f506e94bc141fda9539d1ee6e68f332524aff",
+    "Contents/Info.plist": "8da9d474c7640ae62c000cd45148be8620245639765f6830f8ba83cfaad48e32",
+    "Contents/MacOS/Gelbox": "0aece98cb1d1b374520427bef129f4c2af60217b9488bf18710924da6d8d3949",
     "Contents/Resources/CinderApp.icns": "c94555e3a514a09e14d6a215912495a22bd8fc09fbee1676f0edae14e11b3c26",
     "Contents/Resources/Credits.rtf": "0f022fb0c07d66df047b19a1b94fc1a79addf23ff3a835e1701f990c5025531c",
     "Contents/Resources/Gelbox.icns": "1a0ece57cd35cbe8ddee4100c750f68de535ac2e7779fab0f63ed1fcf2582568",
@@ -34,6 +34,9 @@
     "Contents/Resources/assets/app-settings-line@2x.png": "c1d982b70fad1abf6193ddfb68f5af1dfe22cfb59249ae0895402d120a925a11",
     "Contents/Resources/assets/brace.png": "0b0e2a5a0b8e6d35fca592b40b1aa4f9e25217b40810506c2c9cdcba9df4e45c",
     "Contents/Resources/assets/brace@2x.png": "6f0c23bd9c85eb0ee4c38eaf95dc1d8ade4c948d086f273d8750252f7c5f1188",
+    "Contents/Resources/assets/fonts/LICENSE-SourceSans3.txt": "89ad2c4f66dd29127527493e729c31e731f111cf10faf5774c3db9275ed0c22c",
+    "Contents/Resources/assets/fonts/SourceSans3-Bold.ttf": "9214b9d95e4231c609802815c2646c98174e2102d0d37f88978a7f8e71006e6a",
+    "Contents/Resources/assets/fonts/SourceSans3-Medium.ttf": "a7af35c1cab5dd0b29d742f86f2edfdf83fa7ec213643e765c5c51a2dc24edbc",
     "Contents/Resources/assets/help.png": "aeba3e1adc5b130c3fcff81571217da974476228b6b52362f7b89f36087d0e63",
     "Contents/Resources/assets/help@2x.png": "8a7c9338ccccdec5872516950ac85161ee068e064fd005b608536a465d84b469",
     "Contents/Resources/assets/microtube1500ul.png": "b1dbe804a74e1b0bba27c65e2111dfc5c4d80aada15374661b8b014742b625d2",
@@ -125,7 +128,7 @@
     "Contents/Resources/assets/tuning/gel-render.json": "12333b3d28f39fbc611d62803111edc9c4367f9440facf2629c5e24fc6d9be45",
     "Contents/Resources/assets/tuning/gel-sim.json": "199b5ce3f7b6b256ab58e802b8daf16afa38494e8358bde698999ce37614cfae",
     "Contents/Resources/assets/tuning/molecular-sim.json": "680d573672cd3bb2387788ce6291d5e89e97b507e95b6145fae2d225681961d7",
-    "Contents/_CodeSignature/CodeResources": "c0cf5f263a5bc8bbb654b0d3cd28fd2cdbbcfa548d373d58223410f89bbd496d"
+    "Contents/_CodeSignature/CodeResources": "3b39db8c8aefe9b337dcba9c56342bb824c3c0047096cc890377580366e205ef"
   },
   "source_archive_paths": [
     "LICENSE",
@@ -133,6 +136,18 @@
     "assets",
     "include",
     "proj",
-    "src"
-  ]
+    "src",
+    "tools"
+  ],
+  "built_macos": "27.0.1",
+  "cinder_library_sha256": "b41dbbb9992d295c007824264960099be590e31f4eac8105711be25eaa3e8793",
+  "validation": {
+    "clean_source_archive": true,
+    "compiled": true,
+    "embedded_asset_comparison": true,
+    "ad_hoc_signature_verified": true,
+    "dmg_integrity_and_mounted_bundle": true,
+    "source_archive_files_verified": 179,
+    "gui_smoke": "pending: UI tool currently cannot access app windows"
+  }
 }
