@@ -10,7 +10,7 @@
     "visual: 969 passed, 1 existing skip",
     "two-hour memory acceptance: 120 cycles per Metal backend, unchanged verifier passed"
   ],
-  "verification_note": "Local preview only. Qualified Intel Release geometry reference; exact tested 223-asset bundle. Current-runtime two-hour web memory acceptance passed; evidence commit 781c744 in the web repository. Native interaction/platform acceptance and historical native failure attribution remain open. Safari Command-O menu fallback acceptance remains pending.",
+  "verification_note": "Beta launch approved 2026-10-12. Qualified Intel Release geometry reference; unchanged tested 223-asset bundle. Two-hour web memory acceptance passed. Detailed native interaction/platform parity checks continue during beta. In Safari, use the in-app Open menu when Command-O is intercepted by the browser.",
   "sha256": {
     "assets/50-band-2vpD0nLZ.js": "e50eb48a64a386fefa8fb797586edb7fe6b1e7f2782658efb24e4a8c91972072",
     "assets/50-band-2vpD0nLZ.js.map": "ed95ac99da710a980b12c5aa9fe6fdadb77bf4503e216225aa36c29d307e161a",
@@ -235,5 +235,6 @@
     "third-party/ieee754.txt": "532edbcda8f952540bc94d68f9ffddb83163249068fffa164f8ef2ec920b5145",
     "third-party/inter.txt": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
     "third-party/pngjs.txt": "053a1e053924dd5ed6cb48125de1e2abb8e646631e6deb9e1192e9f45617d534"
-  }
+  },
+  "release_channel": "beta"
 }

@@ -7,6 +7,11 @@
   <style>.skip-link:focus{position:fixed!important;left:10px!important;top:10px!important;width:auto!important;height:auto!important;overflow:visible!important;background:#0072CE;color:#fff;padding:.5rem 1rem;font-size:1rem;z-index:10000;border-radius:4px;text-decoration:none}</style>
   <link rel="stylesheet" href="../css/bulma.css">
   <link rel="stylesheet" href="../css/all.css" >
+  <style>
+    #shortcuts .plat-win, #shortcuts[data-platform="win"] .plat-mac { display: none; }
+    #shortcuts[data-platform="win"] .plat-win { display: inline; }
+    #shortcuts [data-set-platform][aria-pressed="true"] { background-color: #0072CE; border-color: #0072CE; color: #fff; }
+  </style>
   <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124630264-1"></script>
   <script>
@@ -70,17 +75,35 @@
     </div>
     <div class="columns">
       <div class="column is-2">
+        <strong>Web app</strong>
+      </div>
+      <div class="column">
+        <a class="button is-primary" href="./app/" target="_blank" rel="noopener">Launch web app (beta)</a>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-2">
         <strong>Downloads</strong>
       </div>
       <div class="column">
-        <a class="button is-primary" href="./app/">Launch web app</a>
-        <a class="button" href="./files/Gelbox1.0.2-arm64.dmg"><i class="fas fa-fw fa-arrow-to-bottom" aria-hidden="true"></i>&nbsp;macOS 1.0.2 (Apple Silicon)</a>
-        <a class="button" href="./files/Gelbox-Setup-1.0.2.exe">Windows 1.0.2 (x64)</a>
-        <a class="button" href="./files/Gelbox1.0.dmg">macOS 1.0 (Intel)</a>
+        <div class="dropdown" id="macos-dropdown">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-expanded="false" aria-controls="macos-menu">
+              <span><i class="fab fa-fw fa-apple" aria-hidden="true"></i>&nbsp;macOS</span>
+              <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="macos-menu" role="menu">
+            <div class="dropdown-content">
+              <a class="dropdown-item" href="./files/Gelbox1.0.2-arm64.dmg">1.0.2 (Apple Silicon)</a>
+              <a class="dropdown-item" href="./files/Gelbox1.0.dmg">1.0 (Intel)</a>
+            </div>
+          </div>
+        </div>
+        <a class="button" href="./files/Gelbox-Setup-1.0.2.exe"><i class="fab fa-fw fa-windows" aria-hidden="true"></i>&nbsp;Windows 1.0.2 (x64)</a>
         <a class="button" href="https://github.com/douglaslab/gelbox/"><i class="fab fa-fw fa-github" aria-hidden="true"></i>&nbsp;Source</a>
         <a class="button" href="./files/Gelbox.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a>
-        <a class="button" href="./presskit/"><i class="far fa-fw fa-bullhorn" aria-hidden="true"></i>&nbsp;Press kit</a>
-        <p class="is-size-7" style="margin-top:0.75rem">The web app is available as a preview. Desktop 1.0.2 is available for Windows x64 and Apple Silicon Macs (macOS 11+). The Windows installer is unsigned and the Mac app is not notarized; either system may warn on first launch. <a href="./releases/1.0.2.html">Installation instructions, release notes and checksums</a>.</p>
+        <p class="is-size-7" style="margin-top:0.75rem">Desktop 1.0.2 is available for Windows x64 and Apple Silicon Macs (macOS 11+). The Windows installer is unsigned and the Mac app is not notarized; either system may warn on first launch. <a href="./releases/1.0.2.html">Installation instructions, release notes and checksums</a>.</p>
       </div>
     </div>
   </div>
@@ -90,7 +113,7 @@
     <h1 id="introduction" class="title is-4">Introduction <a href="#introduction" aria-label="Link to Introduction section">•</a></h1>
     <div class="columns">
       <div class="column">
-        <p>IIn 1948, when Arne Tiselius won the Nobel Prize in Chemistry for his pioneering work on electrophoresis, he summarized his motivations for the research as follows<sup><a id="Tiselius1948" href="#references">1</a></sup>:
+        <p>In 1948, when Arne Tiselius won the Nobel Prize in Chemistry for his pioneering work on electrophoresis, he summarized his motivations for the research as follows<sup><a id="Tiselius1948" href="#references">1</a></sup>:
         </p>
       </div>
     </div>
@@ -175,8 +198,16 @@
     <br>
     <!-- End of Interface -->
     <h1 id="commands" class="title is-4">Commands &amp; Shortcuts <a href="#commands" aria-label="Link to Commands section">•</a></h1>
-    <div class="container box message">
-    <p class="mb-4">These shortcuts apply to the desktop app. On Windows, use Ctrl in place of ⌘ and Alt in place of Option.</p>
+    <div class="container box message" id="shortcuts" data-platform="mac">
+    <div class="level mb-4">
+      <div class="level-left"><p>These shortcuts apply to the desktop app.</p></div>
+      <div class="level-right">
+        <div class="buttons has-addons" role="group" aria-label="Shortcut platform">
+          <button class="button is-small" type="button" data-set-platform="mac" aria-pressed="true"><i class="fab fa-fw fa-apple" aria-hidden="true"></i>&nbsp;Mac</button>
+          <button class="button is-small" type="button" data-set-platform="win" aria-pressed="false"><i class="fab fa-fw fa-windows" aria-hidden="true"></i>&nbsp;Windows</button>
+        </div>
+      </div>
+    </div>
     <h3 class="title is-4">Bands</h3>
     <div class="columns">
       <div class="column">
@@ -192,7 +223,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Duplicate</p>
-            <p class="subtitle is-6">Hold Option (Mac) or Alt (Windows), click &amp; drag, then release.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">Option</span><span class="plat-win">Alt</span>, click &amp; drag, then release.</p>
           </div>
         </div>
       </div>
@@ -263,7 +294,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Duplicate</p>
-            <p class="subtitle is-6">Hold Option (Mac) or Alt (Windows), click &amp; drag the sample.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">Option</span><span class="plat-win">Alt</span>, click &amp; drag the sample.</p>
           </div>
         </div>
       </div>
@@ -355,7 +386,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Show loupe</p>
-            <p class="subtitle is-6">Hold ⌘ (Mac) or Ctrl (Windows) when the cursor is over the gel.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">⌘</span><span class="plat-win">Ctrl</span> when the cursor is over the gel.</p>
           </div>
         </div>
       </div>
@@ -372,7 +403,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Fixed loupe</p>
-            <p class="subtitle is-6">Hold ⌘ (Mac) or Ctrl (Windows) and click on the gel. Drag the loupe to move it.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">⌘</span><span class="plat-win">Ctrl</span> and click on the gel. Drag the loupe to move it.</p>
           </div>
         </div>
       </div>
@@ -400,7 +431,7 @@
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Save gel</p>
-            <p class="subtitle is-6">⌘-S (Mac) or Ctrl-S (Windows) saves the whole gel as a .json file.</p>
+            <p class="subtitle is-6"><span class="plat-mac">⌘-S</span><span class="plat-win">Ctrl-S</span> saves the whole gel as a .json file.</p>
           </div>
         </div>
       </div>
@@ -408,7 +439,7 @@
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Load gel</p>
-            <p class="subtitle is-6">⌘-O (Mac) or Ctrl-O (Windows), or drag a gel .json file into the window.</p>
+            <p class="subtitle is-6"><span class="plat-mac">⌘-O</span><span class="plat-win">Ctrl-O</span>, or drag a gel .json file into the window.</p>
           </div>
         </div>
       </div>
@@ -416,7 +447,7 @@
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Save Sample</p>
-            <p class="subtitle is-6">⌘-Option-S (Mac) or Ctrl-Alt-S (Windows) saves only the selected sample as a .json file, not the whole gel.</p>
+            <p class="subtitle is-6"><span class="plat-mac">⌘-Option-S</span><span class="plat-win">Ctrl-Alt-S</span> saves only the selected sample as a .json file, not the whole gel.</p>
           </div>
         </div>
       </div>
@@ -517,6 +548,42 @@
 </div>
 </section>
 </main>
+<script>
+  (function () {
+    var dd = document.getElementById('macos-dropdown');
+    var btn = dd.querySelector('button');
+    function setOpen(open) {
+      dd.classList.toggle('is-active', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!dd.classList.contains('is-active'));
+    });
+    document.addEventListener('click', function () { setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  })();
+  (function () {
+    var box = document.getElementById('shortcuts');
+    var buttons = box.querySelectorAll('[data-set-platform]');
+    function setPlatform(p, remember) {
+      box.setAttribute('data-platform', p);
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-set-platform') === p ? 'true' : 'false');
+      }
+      if (remember) { try { localStorage.setItem('gelbox-shortcut-platform', p); } catch (e) {} }
+    }
+    function detect() {
+      try { var saved = localStorage.getItem('gelbox-shortcut-platform'); if (saved === 'mac' || saved === 'win') return saved; } catch (e) {}
+      var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
+      return /win/i.test(ua) ? 'win' : 'mac';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () { setPlatform(this.getAttribute('data-set-platform'), true); });
+    }
+    setPlatform(detect(), false);
+  })();
+</script>
 <footer class="footer" style="background-color: #222222">
 <br><br>
   <div class="container">
