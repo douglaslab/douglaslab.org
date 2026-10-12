@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="../css/bulma.css">
   <link rel="stylesheet" href="../css/all.css" >
   <style>
-    #shortcuts .plat-win, #shortcuts[data-platform="win"] .plat-mac { display: none; }
-    #shortcuts[data-platform="win"] .plat-win { display: inline; }
+    #shortcuts .plat-win, #shortcuts .plat-web { display: none; }
+    #shortcuts[data-platform="win"] .plat-mac, #shortcuts[data-platform="web"] .plat-mac { display: none; }
+    #shortcuts[data-platform="win"] .plat-win, #shortcuts[data-platform="web"] .plat-web { display: inline; }
+    #shortcuts .files-grid .card { height: 100%; }
     #shortcuts [data-set-platform][aria-pressed="true"] { background-color: #0072CE; border-color: #0072CE; color: #fff; }
   </style>
   <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
@@ -95,15 +97,15 @@
           </div>
           <div class="dropdown-menu" id="macos-menu" role="menu">
             <div class="dropdown-content">
-              <a class="dropdown-item" href="./files/Gelbox1.0.2-arm64.dmg">1.0.2 (Apple Silicon)</a>
+              <a class="dropdown-item" href="./files/Gelbox1.1-arm64.dmg">1.1 (Apple Silicon)</a>
               <a class="dropdown-item" href="./files/Gelbox1.0.dmg">1.0 (Intel)</a>
             </div>
           </div>
         </div>
-        <a class="button" href="./files/Gelbox-Setup-1.0.2.exe"><i class="fab fa-fw fa-windows" aria-hidden="true"></i>&nbsp;Windows 1.0.2 (x64)</a>
+        <a class="button" href="./files/Gelbox-Setup-1.1.exe"><i class="fab fa-fw fa-windows" aria-hidden="true"></i>&nbsp;Windows 1.1 (x64)</a>
         <a class="button" href="https://github.com/douglaslab/gelbox/"><i class="fab fa-fw fa-github" aria-hidden="true"></i>&nbsp;Source</a>
         <a class="button" href="./files/Gelbox.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i>&nbsp;PDF</a>
-        <p class="is-size-7" style="margin-top:0.75rem">Desktop 1.0.2 is available for Windows x64 and Apple Silicon Macs (macOS 11+). The Windows installer is unsigned and the Mac app is not notarized; either system may warn on first launch. <a href="./releases/1.0.2.html">Installation instructions, release notes and checksums</a>.</p>
+        <p class="is-size-7" style="margin-top:0.75rem">Desktop 1.1 is available for Windows x64 and Apple Silicon Macs (macOS 11+). The Windows installer is unsigned and the Mac app is not notarized; either system may warn on first launch. <a href="./releases/1.1.html">Installation instructions, release notes and checksums</a>.</p>
       </div>
     </div>
   </div>
@@ -200,11 +202,12 @@
     <h1 id="commands" class="title is-4">Commands &amp; Shortcuts <a href="#commands" aria-label="Link to Commands section">•</a></h1>
     <div class="container box message" id="shortcuts" data-platform="mac">
     <div class="level mb-4">
-      <div class="level-left"><p>These shortcuts apply to the desktop app.</p></div>
+      <div class="level-left"><p>Shortcuts for the <span class="plat-mac">Mac app</span><span class="plat-win">Windows app</span><span class="plat-web">web app</span>.</p></div>
       <div class="level-right">
         <div class="buttons has-addons" role="group" aria-label="Shortcut platform">
           <button class="button is-small" type="button" data-set-platform="mac" aria-pressed="true"><i class="fab fa-fw fa-apple" aria-hidden="true"></i>&nbsp;Mac</button>
           <button class="button is-small" type="button" data-set-platform="win" aria-pressed="false"><i class="fab fa-fw fa-windows" aria-hidden="true"></i>&nbsp;Windows</button>
+          <button class="button is-small" type="button" data-set-platform="web" aria-pressed="false"><i class="fas fa-fw fa-globe" aria-hidden="true"></i>&nbsp;Web</button>
         </div>
       </div>
     </div>
@@ -223,7 +226,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Duplicate</p>
-            <p class="subtitle is-6">Hold <span class="plat-mac">Option</span><span class="plat-win">Alt</span>, click &amp; drag, then release.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">Option</span><span class="plat-win">Alt</span><span class="plat-web">Option/Alt</span>, click &amp; drag, then release.</p>
           </div>
         </div>
       </div>
@@ -294,7 +297,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Duplicate</p>
-            <p class="subtitle is-6">Hold <span class="plat-mac">Option</span><span class="plat-win">Alt</span>, click &amp; drag the sample.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">Option</span><span class="plat-win">Alt</span><span class="plat-web">Option/Alt</span>, click &amp; drag the sample.</p>
           </div>
         </div>
       </div>
@@ -386,7 +389,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Show loupe</p>
-            <p class="subtitle is-6">Hold <span class="plat-mac">⌘</span><span class="plat-win">Ctrl</span> when the cursor is over the gel.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">⌘</span><span class="plat-win">Ctrl</span><span class="plat-web">⌘/Ctrl</span> when the cursor is over the gel<span class="plat-web">, or press ⌘/Ctrl-L to keep it on</span>.</p>
           </div>
         </div>
       </div>
@@ -403,7 +406,7 @@
           </div>
           <div class="card-content">
             <p class="title is-4">Fixed loupe</p>
-            <p class="subtitle is-6">Hold <span class="plat-mac">⌘</span><span class="plat-win">Ctrl</span> and click on the gel. Drag the loupe to move it.</p>
+            <p class="subtitle is-6">Hold <span class="plat-mac">⌘</span><span class="plat-win">Ctrl</span><span class="plat-web">⌘/Ctrl</span> and click on the gel. Drag the loupe to move it.</p>
           </div>
         </div>
       </div>
@@ -426,46 +429,44 @@
       </div>
     </div>
     <h3 class="title is-4">Files</h3>
-    <div class="columns">
-      <div class="column">
+    <div class="columns is-multiline files-grid">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Save gel</p>
-            <p class="subtitle is-6"><span class="plat-mac">⌘-S</span><span class="plat-win">Ctrl-S</span> saves the whole gel as a .json file.</p>
+            <p class="subtitle is-6"><span class="plat-mac">⌘-S</span><span class="plat-win">Ctrl-S</span><span class="plat-web">⌘/Ctrl-S</span> <span class="plat-web">downloads</span><span class="plat-mac">saves</span><span class="plat-win">saves</span> the whole gel as a .json file.</p>
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Load gel</p>
-            <p class="subtitle is-6"><span class="plat-mac">⌘-O</span><span class="plat-win">Ctrl-O</span>, or drag a gel .json file into the window.</p>
+            <p class="subtitle is-6"><span class="plat-mac">⌘-O</span><span class="plat-win">Ctrl-O</span><span class="plat-web">⌘/Ctrl-O or the File menu</span>, or drag a gel .json file into the window.</p>
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content">
-            <p class="title is-4">Save Sample</p>
-            <p class="subtitle is-6"><span class="plat-mac">⌘-Option-S</span><span class="plat-win">Ctrl-Alt-S</span> saves only the selected sample as a .json file, not the whole gel.</p>
+            <p class="title is-4">Save sample</p>
+            <p class="subtitle is-6"><span class="plat-mac">⌘-Option-S</span><span class="plat-win">Ctrl-Alt-S</span><span class="plat-web">⌘/Ctrl-Option-S</span> <span class="plat-web">downloads</span><span class="plat-mac">saves</span><span class="plat-win">saves</span> only the selected sample, not the whole gel.</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="columns">
-      <div class="column is-7">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content">
-            <p class="title is-4">Load Sample</p>
+            <p class="title is-4">Load sample</p>
             <p class="subtitle is-6">Drag a sample .json or ladder .xml file into the desired lane.</p>
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content">
             <p class="title is-4">Load image</p>
-            <p class="subtitle is-6">Drag image (file extensions: png, jpg, gif) file onto the window.</p>
+            <p class="subtitle is-6">Drag a png, jpg or gif file onto the window.</p>
           </div>
         </div>
       </div>
@@ -574,7 +575,7 @@
       if (remember) { try { localStorage.setItem('gelbox-shortcut-platform', p); } catch (e) {} }
     }
     function detect() {
-      try { var saved = localStorage.getItem('gelbox-shortcut-platform'); if (saved === 'mac' || saved === 'win') return saved; } catch (e) {}
+      try { var saved = localStorage.getItem('gelbox-shortcut-platform'); if (saved === 'mac' || saved === 'win' || saved === 'web') return saved; } catch (e) {}
       var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
       return /win/i.test(ua) ? 'win' : 'mac';
     }

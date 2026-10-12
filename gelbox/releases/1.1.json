@@ -1,0 +1,36 @@
+{
+  "version": "1.1",
+  "build": "20261012",
+  "native_commit": "7a0bef6b9aed71d8780dc846d4063598a123c605",
+  "cinder_commit": "f90f332d1a4d453282c76435f3401271f25922f9",
+  "mac": {
+    "architecture": "arm64",
+    "minimum_macos": "11.0",
+    "signature": "ad-hoc",
+    "notarized": false,
+    "assets": "embedded"
+  },
+  "windows": {
+    "architecture": "x64",
+    "tested_os": "Windows 11",
+    "signature": "unsigned",
+    "installer": "Inno Setup 6.7.3",
+    "runtime": "static MSVC",
+    "renderer": "native OpenGL 3.3; 4x MSAA"
+  },
+  "parity": {
+    "mean_grayscale_difference": 0.0861,
+    "max_lane_centroid_difference_px": 0.1568,
+    "client_crop": [
+      208,
+      149,
+      390,
+      495
+    ]
+  },
+  "sha256": {
+    "Gelbox1.1-arm64.dmg": "b5d2cc8bdf6b3cc7bc2f3cb79244405e4f2eb97e88dd02fcc121b949987d2219",
+    "Gelbox-Setup-1.1.exe": "58c654f786c581e7c84b09211ce4044791ff9a84f2fcdb976fb20d7e344185f7",
+    "Gelbox1.1-source.tar.gz": "6c2e206d0c7e753d94c54438884acd12e3102a2aa93009c05c8b34f006a92c77"
+  }
+}
