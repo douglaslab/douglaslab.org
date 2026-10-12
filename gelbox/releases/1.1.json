@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "build": "20261012",
-  "native_commit": "7a0bef6b9aed71d8780dc846d4063598a123c605",
+  "native_commit": "e8ee29633e1c5230a1219bab2563c745e7e31f52",
   "cinder_commit": "f90f332d1a4d453282c76435f3401271f25922f9",
   "mac": {
     "architecture": "arm64",
@@ -31,6 +31,8 @@
   "sha256": {
     "Gelbox1.1-arm64.dmg": "b5d2cc8bdf6b3cc7bc2f3cb79244405e4f2eb97e88dd02fcc121b949987d2219",
     "Gelbox-Setup-1.1.exe": "58c654f786c581e7c84b09211ce4044791ff9a84f2fcdb976fb20d7e344185f7",
-    "Gelbox1.1-source.tar.gz": "6c2e206d0c7e753d94c54438884acd12e3102a2aa93009c05c8b34f006a92c77"
-  }
+    "Gelbox1.1-source.tar.gz": "8094b54d5a9adc2d20c3e5c4676e1450a3e86dcb54ab53012e7942f47bc191e3"
+  },
+  "source_commit": "e8ee29633e1c5230a1219bab2563c745e7e31f52",
+  "source_archive": "unified repository: native app at the root, web app under web/"
 }
