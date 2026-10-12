@@ -7,9 +7,10 @@
     "vitest run: 3100 passed",
     "compiled production: 120 passed",
     "compiled compatibility: 100 passed",
-    "visual: 969 passed, 1 existing skip"
+    "visual: 969 passed, 1 existing skip",
+    "two-hour memory acceptance: 120 cycles per Metal backend, unchanged verifier passed"
   ],
-  "verification_note": "Local preview only. Qualified Intel Release geometry reference; exact tested 223-asset bundle. Native interaction/platform acceptance and current-runtime two-hour stability run remain open. Safari Command-O menu fallback acceptance remains pending.",
+  "verification_note": "Local preview only. Qualified Intel Release geometry reference; exact tested 223-asset bundle. Current-runtime two-hour web memory acceptance passed; evidence commit 781c744 in the web repository. Native interaction/platform acceptance and historical native failure attribution remain open. Safari Command-O menu fallback acceptance remains pending.",
   "sha256": {
     "assets/50-band-2vpD0nLZ.js": "e50eb48a64a386fefa8fb797586edb7fe6b1e7f2782658efb24e4a8c91972072",
     "assets/50-band-2vpD0nLZ.js.map": "ed95ac99da710a980b12c5aa9fe6fdadb77bf4503e216225aa36c29d307e161a",
