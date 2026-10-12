@@ -52,3 +52,9 @@ python3 -m http.server 8766 --bind 127.0.0.1
 
 Publishing is a separate step: review the changes, then update `gh-pages`.
 Do not run `npm run deploy` expecting an upload; that command only rebuilds CSS.
+
+Native 1.0.2 adds Windows x64 alongside Apple Silicon macOS. Its versioned
+installer, disk image, source archive and checksums are in `gelbox/files`;
+`gelbox/releases/1.0.2.json` records revisions, hashes and signing status.
+Windows is unsigned. Mac is ad-hoc signed and not notarized. Release notes
+include installation guidance and platform-specific shortcuts.
